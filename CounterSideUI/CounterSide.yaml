@@ -1,0 +1,29 @@
+anyingdiantang: true
+bugeizuozhan:
+- true
+- true
+- true
+- true
+- false
+collect:
+- false
+- false
+- false
+- false
+- false
+- false
+- false
+company: true
+employee: true
+explore: false
+filepath: ''
+fire: true
+guild: true
+monizuozhan:
+- true
+- true
+- true
+- true
+shengkai: 0
+shopMW: true
+shopflash: 5

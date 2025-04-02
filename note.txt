@@ -1,0 +1,28 @@
+D:/PycharmProjects/mobile/withUI
+D:/"PyCharm Code"/Mobile/withUI
+pyinstaller -wF ui.py -p D:/"PyCharm Code"/Mobile/withUI --add-data 'CounterSide:CounterSide'
+pyinstaller -wF ui.py -p D:/"PyCharm Code"/Mobile/withUI -p yanhuacanzhao_bmp.py
+pyinstaller -F -i a.ico Login.py -p login_png.py
+pyinstaller -wF main.py -p D:/"PyCharm Code"/Mobile/withUI -i favicon.ico
+pyinstaller -wF ui.py -p D:/"PyCharm Code"/Mobile/withUI -i favicon.ico
+pyinstaller -wF main.py -p D:/"PyCharm Code"/Mobile/withUI -i favicon.ico
+
+pip install pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install pyyaml -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install pytesseract -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install keyboard -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install pydub -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install pygame -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install psutil -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+pip install playsound -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip install eyed3 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip install cnocr -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install PyTorch -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install onnxruntime  -i https://pypi.tuna.tsinghua.edu.cn/simple
+https://zhuanlan.zhihu.com/p/546441117
+
