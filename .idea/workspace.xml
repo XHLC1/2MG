@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c71aa209-a816-486a-9e69-4bbf1ec4b993" name="Changes" comment="" />
+    <list default="true" id="c71aa209-a816-486a-9e69-4bbf1ec4b993" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LHLR/LHLRfun.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgen_action.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CWCX/CWCXFun.py" beforeDir="false" afterPath="$PROJECT_DIR$/CWCX/CWCXFun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CounterSide/CounterSideFun.py" beforeDir="false" afterPath="$PROJECT_DIR$/CounterSide/CounterSideFun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CounterSideUI/CounterSide/CounterSideFun.py" beforeDir="false" afterPath="$PROJECT_DIR$/CounterSideUI/CounterSide/CounterSideFun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CounterSideUI/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CounterSideUI/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LO/PC/LOPCFun.py" beforeDir="false" afterPath="$PROJECT_DIR$/LO/PC/LOPCFun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LO/PC/picture/expedition_com3.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/LO/PC/picture/expedition_com3.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NIKKE/nikkefun.py" beforeDir="false" afterPath="$PROJECT_DIR$/NIKKE/nikkefun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RE1999/RE1999Fun.py" beforeDir="false" afterPath="$PROJECT_DIR$/RE1999/RE1999Fun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YXHS/YXHSFun.py" beforeDir="false" afterPath="$PROJECT_DIR$/YXHS/YXHSFun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt.1" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt.2" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wuqimitu/picture/shop_jingxuan_changgui.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/wuqimitu/picture/shop_jingxuan_changgui.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wuqimitu/wuqimituFun.py" beforeDir="false" afterPath="$PROJECT_DIR$/wuqimitu/wuqimituFun.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,8 +38,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -36,12 +63,14 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Code/PythonCode/withUI/CounterSideUI&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Code/PythonCode/withUI&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Code\PythonCode\withUI" />
       <recent name="C:\Code\PythonCode\withUI\CounterSideUI" />
       <recent name="D:\PyCharm Code\Mobile\withUI" />
     </key>
@@ -52,7 +81,7 @@
       <recent name="D:\PyCharm Code\Mobile\withUI\RE1999" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.ui (1)">
     <configuration name="CounterSideFun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="withUI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,8 +189,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.ui (1)" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.main_config" />
         <item itemvalue="Python.CounterSideFun" />
         <item itemvalue="Python.nikkefun" />

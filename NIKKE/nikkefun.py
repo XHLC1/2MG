@@ -1,4 +1,7 @@
 import time
+
+import pyautogui
+
 import general_actions as generalact
 import pyautogui as CSauto
 from enum import Enum
@@ -71,15 +74,56 @@ def ark(LJ_choose):
     if LJ_choose == LJ_BOSS.克拉肯:
         while 1:
             if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\LJ_BOSS1.bmp', 0.8, 0, 0, 1920, 1080):
+                generalact.moveclick_3s(960, 886)
+                generalact.rangeclick02(5, 940, 735)  # 1
+                generalact.rangeclick02(5, 1100, 1000)
+                # generalact.rangeclick02(5, 812, 921)  # 模拟战
+                while 1:
+                    if generalact.imgcorrdinatefunenterreturnP('NIKKE\\picture\\tab.bmp', 0.9, 0, 0, 1920, 1080):
+                        # time.sleep(1)
+                        # CSauto.press("tab")
+                        # 0138
+                        # pyautogui.press("Z")
+                        # pyautogui.press("Z")
+                        time.sleep(104)
+                        # for i in range(3):
+                        #     generalact.dragmouse(930, 133, 944, 477)
+                        #     generalact.dragmouse(944, 477, 1113, 468)
+                        #     generalact.dragmouse(1113, 468, 930, 133)
+
+                        pyautogui.moveTo(930, 133)
+                        pyautogui.mouseDown()
+                        time.sleep(0.5)
+                        pyautogui.mouseUp()
+                        time.sleep(0.1)
+                        pyautogui.mouseDown()
+                        time.sleep(0.5)
+                        pyautogui.mouseUp()
+                        pyautogui.moveTo(813, 502)
+                        pyautogui.mouseDown()
+                        time.sleep(0.5)
+                        pyautogui.mouseUp()
+                        time.sleep(0.1)
+                        pyautogui.mouseDown()
+                        time.sleep(0.5)
+                        pyautogui.mouseUp()
+                        pyautogui.moveTo(1113, 468)
+                        pyautogui.mouseDown()
+                        time.sleep(0.5)
+                        pyautogui.mouseUp()
+                        time.sleep(0.1)
+                        pyautogui.mouseDown()
+                        time.sleep(0.5)
+                        pyautogui.mouseUp()
+
+                        # CSauto.press("esc")
+                        break
                 break
             generalact.moveclick_3s(1146, 810)
-        generalact.moveclick_3s(960, 886)
-        generalact.rangeclick02(5, 940, 735)  # 1
         # generalact.rangeclick02(5, 1010, 735)  # 2
         # generalact.rangeclick02(5, 1075, 735)  # 3
         # generalact.rangeclick02(5, 1145, 735)  # 4
         # generalact.rangeclick02(5, 1215, 735)  # 5
-        generalact.rangeclick02(5, 1100, 1000)
         while 1:
             if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\nextstep.bmp', 0.8, 0, 0, 1920, 1080):
                 break
@@ -134,10 +178,14 @@ def danrentuji():
         if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\danrentuji_result.bmp', 0.8, 0, 0, 1920, 1080):
             generalact.rangeclick02(5, 965, 1061)
         else:
-            if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\quickbat.bmp', 0.9, 0, 0, 1920, 1080):
-                generalact.rangeclick02(4, 1097, 755)
-                generalact.rangeclick02(4, 1068, 835)
+            generalact.moveclick_1s(1188, 420)  # 右
+            if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\danrentuji_challenge.bmp', 0.9, 0, 0, 1920, 1080):
+                generalact.moveclick_1s(725, 420)  # 左
+                if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\quickbat.bmp', 0.9, 0, 0, 1920, 1080):
+                    generalact.rangeclick02(4, 1097, 755)
+                    generalact.rangeclick02(4, 1068, 835)
             else:
+                generalact.moveclick_1s(725, 420)  # 左
                 for i in range(3):
                     generalact.moveclick_1s(963, 907)
                     generalact.moveclick_5s(1090, 678)
@@ -147,7 +195,7 @@ def danrentuji():
                             break
                         if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\nextstep2.bmp', 0.8, 0, 0, 1920, 1080):
                             break
-                        time.sleep(5)
+                        time.sleep(10)
                     generalact.rangeclick02(10, 940, 1045)
         backtomainmenu()
 
@@ -176,25 +224,25 @@ def nikke():
     generalact.imgcorrdinatefunde1('NIKKE\\picture\\lvup.bmp', 0.9, 1500, 200, 1920, 1080)
     generalact.moveclick_1s(954, 844)
     backtonikke()
-    # generalact.moveclick_1s(781, 220)  # 1
-    generalact.moveclick_1s(925, 220)  # 3
-    # generalact.moveclick_1s(925, 220)  # 3
-    while 1:
-        if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\longhair.bmp', 0.9, 0, 0, 1920, 1080):
-            break
-        else:
-            generalact.dragmouse(1430, 650, 1430, 450)
-    generalact.imgcorrdinatefunde1('NIKKE\\picture\\limitbreak.bmp', 0.9, 1500, 200, 1920, 1080)
-    generalact.moveclick_1s(1789, 888)
-    generalact.moveclick_1s(1789, 888)
-    # generalact.moveclick_1s(978, 829)  # 装备升级
-    generalact.moveclick_1s(960, 921)
-    for i in range(3):
-        generalact.moveclick_1s(763, 541)
-        generalact.moveclick_2s(1056, 909)
-    backtonikke()
     # # generalact.moveclick_1s(781, 220)  # 1
     # generalact.moveclick_1s(925, 220)  # 3
+    # # generalact.moveclick_1s(925, 220)  # 3
+    # while 1:
+    #     if generalact.imgcorrdinatefunclickcount3('NIKKE\\picture\\longhair.bmp', 0.9, 0, 0, 1920, 1080):
+    #         break
+    #     else:
+    #         generalact.dragmouse(1430, 650, 1430, 450)
+    # generalact.imgcorrdinatefunde1('NIKKE\\picture\\limitbreak.bmp', 0.9, 1500, 200, 1920, 1080)
+    # generalact.moveclick_1s(1789, 888)
+    # generalact.moveclick_1s(1789, 888)
+    # # generalact.moveclick_1s(978, 829)  # 装备升级
+    # generalact.moveclick_1s(960, 921)
+    # for i in range(3):
+    #     generalact.moveclick_1s(763, 541)
+    #     generalact.moveclick_2s(1056, 909)
+    # backtonikke()
+    # # # generalact.moveclick_1s(781, 220)  # 1
+    # # generalact.moveclick_1s(925, 220)  # 3
 
     generalact.moveclick_1s(1656, 137)
     generalact.moveclick_1s(368, 378)
@@ -250,13 +298,13 @@ def shop():
         generalact.moveclick_1s(342, 492)
         generalact.imgcorrdinatefun('NIKKE\\picture\\confirm.bmp', 0.9, 600, 600, 1920, 1080)
         backtoshop()
-    generalact.imgcorrdinatefunde1('NIKKE\\picture\\shop_JJC.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.moveclick_1s(48, 668)
-    x = 0
-    for i in range(6):
-        generalact.moveclick_05s(190 + x, 653)
-        x += 165
-        shopmax1()
+    # generalact.imgcorrdinatefunde1('NIKKE\\picture\\shop_JJC.bmp', 0.9, 0, 0, 1920, 1080)
+    # generalact.moveclick_1s(48, 668)
+    # x = 0
+    # for i in range(6):
+    #     generalact.moveclick_05s(190 + x, 653)
+    #     x += 165
+    #     shopmax1()
     if generalact.firstDayOfWeek2():
         generalact.imgcorrdinatefunde1('NIKKE\\picture\\scrapshop.bmp', 0.9, 0, 0, 1920, 1080)
         scrapshop_xia3()
@@ -344,8 +392,8 @@ def startwholegame():
     generalact.startup_time('C:\\MobileGame\\NIKKE\\Launcher\\nikke_launcher.exe', 10)
     # generalact.imgcorrdinatefunwhile('NIKKE\\picture\\gui_start.bmp', 0.9, 0, 0, 1920, 1080)
     # generalact.imgcorrdinatefunde1('NIKKE\\picture\\gui_start.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('NIKKE\\picture\\gui_start2.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('NIKKE\\picture\\gui_start2.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunwhile('NIKKE\\picture\\gui_start3.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunde1('NIKKE\\picture\\gui_start3.bmp', 0.9, 0, 0, 1920, 1080)
     time.sleep(10)
     generalact.rangeclick02(10, 44, 46)
     time.sleep(3)

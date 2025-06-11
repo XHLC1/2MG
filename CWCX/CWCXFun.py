@@ -11,19 +11,20 @@ CSauto.FAILSAFE_POINTS = [(0, 0)]
 # generalact.imgcorrdinatefun('vectory.bmp', 0.9, 1145, 130, 1610, 300)
 
 
-def dailytaskst(AFTD, huodongflag, jinjie):
+def dailytaskst(AFTD, huodongflag, jinjie, battleflag):
     enterCWCXfun()
     exerciesfun(AFTD)
     commandroom(AFTD)
     if AFTD:
         friend()
         supply()
-    if generalact.firstDayOfWeek():
+    if (generalact.firstDayOfWeek() or generalact.firstDayOfWeek2()) and AFTD:
         battle_jinjie(jinjie)
     if huodongflag:
-        QSDHZ(AFTD)
+        # SYJKDDF(AFTD)
+        YQWDXYS(AFTD)
     else:
-        battle()
+        battle(AFTD, battleflag)
     if AFTD:
         pass
     else:
@@ -236,20 +237,29 @@ def mall_buy_drug(x, y):
     mall_buy()
 
 
-def battle():
+def battle(AFTD, battleflag):
     generalact.logger.info('CWCXFun.battle')
     generalact.imgcorrdinatefunde1('CWCX\\picture\\Battle.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick02(3, 435, 250)
     generalact.imgcorrdinatefunde1('CWCX\\picture\\Battle_resource.bmp', 0.8, 0, 0, 1920, 1080)
-    # generalact.moveclick_3s(430, 670)
-    generalact.moveclick_3s(730, 670)
-    quickbat()
+    if (not generalact.firstDayOfWeek() and not generalact.firstDayOfWeek2() and not generalact.firstDayOfWeek6() and not generalact.firstDayOfWeek7()) and AFTD:
+        generalact.imgcorrdinatefunde1('CWCX\\picture\\Battle_resource_mingyunshilian.bmp', 0.8, 0, 0, 1920, 1080)
+        quickbat()
+    else:
+        if battleflag == 2:  # 核心制作
+            generalact.imgcorrdinatefunde1('CWCX\\picture\\Battle_resource_hexinzhizhao.bmp', 0.8, 0, 0, 1920, 1080)
+            quickbat()
+        if battleflag == 3:  # 队员特训
+            generalact.imgcorrdinatefunde1('CWCX\\picture\\Battle_resource_duiyuantexun.bmp', 0.8, 0, 0, 1920, 1080)
+            quickbat()
 
 
 def battle_jinjie(jinjie):
     generalact.logger.info('CWCXFun.battle')
     generalact.imgcorrdinatefunde1('CWCX\\picture\\Battle.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.rangeclick02(3, 435, 250)
     generalact.imgcorrdinatefunde1('CWCX\\picture\\Battle_resource.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunde1('CWCX\\picture\\Battle_resource_zhuangjiajinjie.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.moveclick_3s(1500, 685)
     if jinjie == 2:
         generalact.moveclick_1s(108, 432)
@@ -260,6 +270,71 @@ def battle_jinjie(jinjie):
 
 def LHTFcancel():
     generalact.rangeclick02(4, 770, 845)
+
+
+def SYJKDDF(AFTD):  # 山樱将开的地方
+    generalact.logger.info('CWCXFun.SYJKDDF')
+    generalact.imgcorrdinatefunde1('CWCX\\huodong\\SYJKDDF\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\SYJKDDF\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunde1('CWCX\\huodong\\SYJKDDF\\tiaozhan.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\SYJKDDF\\tiaozhan.bmp', 0.8, 0, 0, 1920, 1080)
+    for i in range(2):
+        generalact.imgcorrdinatefunde1('CWCX\\huodong\\SYJKDDF\\a.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\SYJKDDF\\a.bmp', 0.9, 0, 0, 1920, 1080)
+
+        generalact.imgcorrdinatefunde1('CWCX\\huodong\\SYJKDDF\\quickbat.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\SYJKDDF\\quickbat.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.rangeclick02(3, 1190, 378)
+        generalact.rangeclick02(3, 960, 840)
+        generalact.rangeclick02(8, 970, 940)
+        generalact.rangeclick02(4, 754, 845)
+        clickblock()
+    back1()
+    if AFTD == 0:
+        generalact.imgcorrdinatefunde1('CWCX\\huodong\\SYJKDDF\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\SYJKDDF\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.rangeclick02(5, 768, 358)
+        generalact.rangeclick02(5, 1191, 619)
+        generalact.rangeclick02(10, 1275, 775)
+        back1()
+        generalact.imgcorrdinatefunde1('CWCX\\huodong\\SYJKDDF\\mission.bmp', 0.8, 0, 700, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\SYJKDDF\\mission.bmp', 0.8, 0, 700, 1920, 1080)
+        generalact.rangeclick02(5, 1700, 1000)
+        back1()
+    backtomainui()
+
+
+def KYESNDYD(AFTD):  # 跨越二十年的约定
+    generalact.logger.info('CWCXFun.QSDHZ')
+    generalact.imgcorrdinatefunde1('CWCX\\huodong\\KYESNDYD\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\KYESNDYD\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunde1('CWCX\\huodong\\KYESNDYD\\tiaozhan.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\KYESNDYD\\tiaozhan.bmp', 0.8, 0, 0, 1920, 1080)
+    for i in range(2):
+        generalact.imgcorrdinatefunde1('CWCX\\huodong\\KYESNDYD\\b.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\KYESNDYD\\b.bmp', 0.9, 0, 0, 1920, 1080)
+
+        generalact.imgcorrdinatefunde1('CWCX\\huodong\\KYESNDYD\\quickbat.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\KYESNDYD\\quickbat.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.rangeclick02(3, 1190, 378)
+        generalact.rangeclick02(3, 960, 840)
+        generalact.rangeclick02(8, 970, 940)
+        generalact.rangeclick02(4, 754, 845)
+        clickblock()
+    back1()
+    if AFTD == 0:
+        generalact.imgcorrdinatefunde1('CWCX\\huodong\\KYESNDYD\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\KYESNDYD\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.rangeclick02(5, 768, 358)
+        generalact.rangeclick02(5, 1191, 619)
+        generalact.rangeclick02(5, 1158, 772)
+        clickblock()
+        back1()
+        generalact.imgcorrdinatefunde1('CWCX\\huodong\\KYESNDYD\\mission.bmp', 0.8, 0, 700, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('CWCX\\huodong\\KYESNDYD\\mission.bmp', 0.8, 0, 700, 1920, 1080)
+        generalact.rangeclick02(5, 1700, 1000)
+        back1()
+    backtomainui()
 
 
 def QSDHZ(AFTD):  # 情书夺还战

@@ -42,30 +42,37 @@ def signinfun():
     generalact.logger.info('RE1999Fun.signinfun')
     generalact.moveclick_05s(1484, 620)  # 不休荒原
     generalact.imgcorrdinatefunwhile('RE1999\\wilderness.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('RE1999\\wilderness.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefuncount3P('RE1999\\wilderness.bmp', 0.8, 0, 0, 1920, 1080)
+    time.sleep(1)
     generalact.moveclick_1s(747, 205)  # 微小
     generalact.moveclick_1s(1161, 152)  # 利齿
     # generalact.moveclick_1s(800, 268)
     # generalact.moveclick_1s(1133, 199)
     generalact.moveclick_3s(116, 338)
     back1()
-    generalact.rangeclick01(20, 1464,630)
+    generalact.rangeclick01(20, 1464, 630)
+    generalact.imgcorrdinatefuncount3P('RE1999\\wilderness.bmp', 0.8, 0, 0, 1920, 1080)
+    # generalact.imgcorrdinatefunde1('RE1999\\wilderness.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.moveclick_1s(747, 205)  # 微小
+    generalact.moveclick_1s(1161, 152)  # 利齿
+    # generalact.moveclick_1s(800, 268)
+    # generalact.moveclick_1s(1133, 199)
     backtomainui()
-    generalact.moveclick_05s(1484, 620)  # 不休荒原
-    generalact.imgcorrdinatefunwhile('RE1999\\wilder_P_produce.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('RE1999\\wilder_P_produce.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.moveclick_1s(1512, 311)
-    clickblock()
-    generalact.moveclick_1s(666, 985)  # 员工
-    while 1:
-        if generalact.imgcorrdinatefunclickcount3('RE1999\\wilder_P_produce_E.bmp', 0.9, 0, 0, 1920, 1080):
-            pass
-        else:
-            clickblock()
-            break
-    generalact.moveclick_1s(1234, 985)  # 产品
-    generalact.rangeclick02(4, 945, 860)
-    backtomainui()
+    # generalact.moveclick_05s(1484, 620)  # 不休荒原
+    # generalact.imgcorrdinatefunwhile('RE1999\\wilder_P_produce.bmp', 0.8, 0, 0, 1920, 1080)
+    # generalact.imgcorrdinatefunde1('RE1999\\wilder_P_produce.bmp', 0.8, 0, 0, 1920, 1080)
+    # generalact.moveclick_1s(1512, 311)
+    # clickblock()
+    # generalact.moveclick_1s(666, 985)  # 员工
+    # while 1:
+    #     if generalact.imgcorrdinatefunclickcount3('RE1999\\wilder_P_produce_E.bmp', 0.9, 0, 0, 1920, 1080):
+    #         pass
+    #     else:
+    #         clickblock()
+    #         break
+    # generalact.moveclick_1s(1234, 985)  # 产品
+    # generalact.rangeclick02(4, 945, 860)
+    # backtomainui()
 
 
 def signM():
@@ -164,7 +171,7 @@ def willanalysis():
 def poussiere(huodongflag, resourceflag):
     generalact.logger.info('RE1999Fun.poussiere')
     if huodongflag:
-        huodong2_5()
+        huodong2_7()
     else:
         if resourceflag == 1:
             generalact.moveclick_1s(1686, 525)  # 入场
@@ -257,6 +264,7 @@ def gamepass():
     for i in range(3):
         generalact.imgcorrdinatefun3('RE1999\\gamepass.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.imgcorrdinatefun3('RE1999\\gamepass1.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefun3('RE1999\\gamepass2.bmp', 0.9, 0, 0, 1920, 1080)
     time.sleep(3)
     if generalact.imgcorrdinatefun3('RE1999\\pass_get.bmp', 0.9, 0, 0, 1920, 1080):
         clickblock()
@@ -346,6 +354,34 @@ def back2():  # 返回
 
 def back3():  # 返回
     generalact.moveclick_3s(105, 103)
+
+
+def huodong2_7():  # 1987宇宙组曲
+    count = 0
+    generalact.logger.info('RE1999Fun.huodong2_7')
+    generalact.moveclick_1s(1550, 355)  # 入场
+    generalact.imgcorrdinatefunde1('RE1999\\huodong\\RE2.7\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    time.sleep(5)
+    while 1:
+        if generalact.imgcorrdinatefunclickcount3('RE1999\\huodong\\RE2.7\\18.bmp', 0.8, 0, 0, 1920, 1080):
+            break
+        else:
+            count += 1
+            if count < 12:
+                generalact.dragmouse(1720, 915, 165, 895)
+            else:
+                generalact.dragmouse(165, 915, 1720, 895)
+            time.sleep(1)
+    generalact.rangeclick02(5, 1800, 400)
+    generalact.moveclick_1s(1545, 946)
+    batconfirm4()
+    battlevectory()
+    generalact.imgcorrdinatefunwhile('RE1999\\energy.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.moveclick_1s(1506, 999)
+    if generalact.imgcorrdinatefuncount3('RE1999\\getenergy.bmp', 0.9, 0, 0, 1920, 1080):
+        pass
+    else:
+        battlevectory()
 
 
 def huodong2_5():  # 唐人街影话
@@ -565,3 +601,17 @@ def huodong1_2():
         pass
     else:
         battlevectory()
+
+
+def test():
+    generalact.moveclick_05s(1484, 620)  # 不休荒原
+    generalact.imgcorrdinatefunwhile('RE1999\\wilderness.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunde1('RE1999\\wilderness.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.moveclick_1s(747, 205)  # 微小
+    generalact.moveclick_1s(1161, 152)  # 利齿
+    # generalact.moveclick_1s(800, 268)
+    # generalact.moveclick_1s(1133, 199)
+    generalact.moveclick_3s(116, 338)
+    back1()
+    generalact.rangeclick01(20, 1464,630)
+    backtomainui()

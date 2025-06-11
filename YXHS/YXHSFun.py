@@ -9,16 +9,16 @@ CSauto.FAILSAFE_POINTS = [(0, 0)]
 def dailytaskst(AFTD, huodongflag, huodongflag_stage, resourceflag, xinmaoflag):
     entergamefun()
     normal_shop(AFTD)
-    recruit()
+    recruit(AFTD)
     YXJQ()
     getenergy()
     if huodongflag:
-        huodong1_3(AFTD, huodongflag_stage)
+        huodong1_6()
     else:
         dabat(resourceflag)
     dabattebie(AFTD, xinmaoflag)
     mission(AFTD)
-    gamecommunity(AFTD)
+    # gamecommunity(AFTD)
     theroom(AFTD)
     RZHY(AFTD)
     generalact.MUMUclose1()
@@ -121,6 +121,9 @@ def theroom(AFTD):
             if theroom_jiedu('YXHS\\picture\\theroom_beilasike.bmp'):
                 revalue = 1
                 break
+            if theroom_jiedu('YXHS\\picture\\theroom_hengdeli.bmp'):
+                revalue = 1
+                break
             if theroom_jiedu('YXHS\\picture\\theroom_fuluolunsi.bmp'):
                 revalue = 1
                 break
@@ -210,7 +213,7 @@ def dabat(resourceflag):
     generalact.logger.info('YXHSFun.dabat')
     if resourceflag:
         enterzuozhan()
-        generalact.rangeclick02(5, 1500, 1028)  # 资源筹备
+        generalact.rangeclick02(10, 1500, 1028)  # 资源筹备
         if resourceflag == 1:
             generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\dabat_money.bmp', 0.8, 0, 0, 1920, 1080)
         if resourceflag == 2:
@@ -245,7 +248,7 @@ def dabattebie(AFTD, xinmaoflag):
 
 def dabat_xinmaochoose(src):
     while 1:
-        if generalact.imgcorrdinatefunclickcount3(src, 0.8, 0, 0, 1920, 1080):
+        if generalact.imgcorrdinatefunclickcount3(src, 0.9, 0, 0, 1920, 1080):
             break
         else:
             generalact.dragmouse(370, 750, 370, 450)
@@ -253,7 +256,7 @@ def dabat_xinmaochoose(src):
 
 def YXJQ():  # 周本
     generalact.logger.info('YXHSFun.YXJQ')
-    if generalact.firstDayOfWeek6():
+    if generalact.firstDayOfWeek2():
         enterzuozhan()
         generalact.rangeclick02(5, 826, 1017)
         generalact.moveclick_3s(1385, 580)
@@ -281,12 +284,13 @@ def getenergy():
 
 def RZHY(AFTD):  # 认知海域 半月本
     if not AFTD:
-        if generalact.firstDayOfWeek5() or generalact.firstDayOfWeek6():
-        # if generalact.firstDayOfWeek5():
+        if generalact.firstDayOfWeek5():
             generalact.logger.info('YXHSFun.RZHY')
             enterzuozhan()
             generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\RZHY.bmp', 0.8, 0, 0, 1920, 1080)
             n = 1
+            generalact.rangeclick02(4, 1010, 625)
+            generalact.rangeclick02(4, 1735, 350)
             if generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\RZHY_ABY13.bmp', 0.8, 0, 0, 1920, 1080):
                 generalact.moveclick_3s(1700, 970)
                 generalact.moveclick_3s(1270, 550)
@@ -386,8 +390,8 @@ def normal_shop(AFTD):
                                                        1920, 1080)
                 clickblock()  # 2
             ##紫心奖章
-            generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_P.bmp', 0.8, 0, 0, 1920, 1080)
-            generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_P1.bmp', 0.8, 0, 0, 1920, 1080)
+            generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_P.bmp', 0.9, 0, 0, 1920, 1080)
+            generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_P1.bmp', 0.9, 0, 0, 1920, 1080)
             if generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_voucher.bmp', 0.8, 0, 0,
                                                    1920, 1080):
                 generalact.rangeclick01(20, 1385, 610)
@@ -397,20 +401,21 @@ def normal_shop(AFTD):
     backtomainui()
 
 
-def recruit():
-    generalact.logger.info('YXHSFun.recruit')
-    generalact.imgcorrdinatefunde1('YXHS\\picture\\recruit.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('YXHS\\picture\\recruit_extern.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.rangeclick02(5, 1476, 827)
-    while 1:
-        if generalact.imgcorrdinatefuncount3P('YXHS\\picture\\recruit_extern_start.bmp', 0.8, 0, 0, 1920, 1080):
-            generalact.imgcorrdinatefunde1('YXHS\\picture\\recruit_extern_start.bmp', 0.8, 0, 0, 1920, 1080)
-            break
-        else:
-            clickblock()
-    generalact.rangeclick02(5, 1237, 577)
-    generalact.rangeclick02(5, 1168, 733)
-    backtomainui()
+def recruit(AFTD):
+    if not AFTD:
+        generalact.logger.info('YXHSFun.recruit')
+        generalact.imgcorrdinatefunde1('YXHS\\picture\\recruit.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunde1('YXHS\\picture\\recruit_extern.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.rangeclick02(5, 1476, 827)
+        while 1:
+            if generalact.imgcorrdinatefuncount3P('YXHS\\picture\\recruit_extern_start.bmp', 0.8, 0, 0, 1920, 1080):
+                generalact.imgcorrdinatefunde1('YXHS\\picture\\recruit_extern_start.bmp', 0.8, 0, 0, 1920, 1080)
+                break
+            else:
+                clickblock()
+        generalact.rangeclick02(5, 1237, 577)
+        generalact.rangeclick02(5, 1168, 733)
+        backtomainui()
 
 
 def mission_city_patrol(x, y, n):
@@ -466,6 +471,8 @@ def mission(AFTD):
         generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\mission_daily.bmp', 0.8, 0, 0, 1920, 1080)
         generalact.rangeclick02(5, 1670, 1018)
         clickblock()
+        generalact.rangeclick02(5, 1670, 1018)
+        clickblock()
     ###########################################################daily_mission############################################
 
     ###########################################################week_mission#############################################
@@ -488,11 +495,104 @@ def quickbat():
     generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\quickbat_complete.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1475, 710)
     time.sleep(3)
-    generalact.rangeclick01(5, 530, 640)  # blcok
+    generalact.rangeclick02(5, 530, 640)  # blcok
     generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\quickbat_complete_start.bmp', 0.8, 0, 0, 1920, 1080)
     time.sleep(3)
     clickblock()
     generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\quickbat_complete_end.bmp', 0.8, 0, 0, 1920, 1080)
+
+
+def huodong1_6():  # 临界视域
+    generalact.moveclick_3s(1700, 500)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\update.bmp', 0.7, 990, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\update.bmp', 0.7, 990, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_6\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_6\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.dragmouse(1700, 790, 450, 790)
+    # if stage == 1:
+    #     generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_6\\up1.bmp', 0.95, 0, 0, 1920, 1080)
+    # if stage == 2:
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_6\\up2.bmp', 0.95, 0, 0, 1920, 1080)
+    # if stage == 3:
+    #     generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_6\\up3.bmp', 0.95, 0, 0, 1920, 1080)
+    quickbat()
+    backtomainui()
+
+    generalact.moveclick_3s(1700, 500)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_6\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_6\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+    while 1:
+        if generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_6\\shop_get.bmp', 0.8, 0, 0, 1920, 1080):
+            break
+        else:
+            generalact.dragmouse(1700, 790, 1500, 790)
+    generalact.moveclick_1s(1525, 608)
+    generalact.moveclick_1s(1400, 795)
+    clickblock()
+    backtomainui()
+
+
+def huodong1_5(AFTD, stage):  # 囚徒困境
+    generalact.moveclick_3s(1700, 500)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_5\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_5\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.dragmouse(1700, 790, 450, 790)
+    if stage == 1:
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_5\\up1.bmp', 0.95, 0, 0, 1920, 1080)
+    if stage == 2:
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_5\\up2.bmp', 0.95, 0, 0, 1920, 1080)
+    if stage == 3:
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_5\\up3.bmp', 0.95, 0, 0, 1920, 1080)
+    quickbat()
+    backtomainui()
+
+    generalact.moveclick_3s(1700, 500)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_5\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_5\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+    while 1:
+        if generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_5\\shop_get.bmp', 0.8, 0, 0, 1920, 1080):
+            break
+        else:
+            generalact.dragmouse(1700, 790, 1500, 790)
+    generalact.moveclick_1s(1525, 608)
+    generalact.moveclick_1s(1400, 795)
+    clickblock()
+    backtomainui()
+
+
+def huodong1_4(AFTD, stage):  # 校园大玩家
+    generalact.moveclick_3s(1700, 500)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\enter.bmp', 0.8, 0, 0, 1920, 1080)
+    if stage == 1:
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\up1.bmp', 0.9, 0, 0, 1920, 1080)
+    if stage == 2:
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\up2.bmp', 0.9, 0, 0, 1920, 1080)
+    if stage == 3:
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\up3.bmp', 0.9, 0, 0, 1920, 1080)
+    quickbat()
+    backtomainui()
+    if ~AFTD:
+        generalact.moveclick_3s(1700, 500)
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\shop_get.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\shop_get.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.moveclick_1s(1525, 608)
+        generalact.moveclick_1s(1400, 795)
+        clickblock()
+        backtomainui()
+    if not AFTD:
+        generalact.moveclick_3s(1700, 500)
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\logo3.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\logo3.bmp', 0.8, 0, 0, 1920, 1080)
+        time.sleep(3)
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\logo3_im_get.bmp', 0.7, 0, 0, 1920, 1080)
+        generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\logo3_im_get.bmp', 0.7, 0, 0, 1920, 1080)
+        for i in range(4):
+            generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\logo3_im.bmp', 0.8, 0, 0, 1920, 1080)
+            generalact.rangeclick02(8, 990, 970)
+        backtomainui()
 
 
 def huodong1_3(AFTD, stage):  # 谜案回首
@@ -564,6 +664,11 @@ def backtomainui():
             back1()
         generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\close.bmp', 0.7, 990, 0, 1920, 1080)
         generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\update.bmp', 0.7, 990, 0, 1920, 1080)
+        if generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\enter_tap.bmp', 0.8, 0, 0, 1920, 1080):
+            time.sleep(5)
+            generalact.rangeclick02(10, 1193, 540)
+            time.sleep(5)
+            generalact.rangeclick02(10, 880, 805)
 
 
 def back1():
@@ -595,11 +700,15 @@ def clickblock():
 
 
 def test():
-    generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_P.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_P1.bmp', 0.8, 0, 0, 1920, 1080)
-    if generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_voucher.bmp', 0.8, 0, 0,
-                                              1920, 1080):
-        generalact.rangeclick01(20, 1385, 610)
-        generalact.imgcorrdinatefunclickcount3('YXHS\\picture\\normal_shop_jiajiangduihuan_buy.bmp', 0.8, 0, 0,
-                                               1920, 1080)
-        clickblock()  # 1
+    generalact.moveclick_3s(1700, 500)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\shop.bmp', 0.8, 0, 0, 1920, 1080)
+    while 1:
+        if generalact.imgcorrdinatefunclickcount3('YXHS\\huodong\\1_4\\shop_get.bmp', 0.8, 0, 0, 1920, 1080):
+            break
+        else:
+            generalact.dragmouse(1860, 700, 1630, 700)
+    generalact.moveclick_1s(1525, 608)
+    generalact.moveclick_1s(1400, 795)
+    clickblock()
+    backtomainui()

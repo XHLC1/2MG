@@ -29,6 +29,7 @@ def mission():
     generalact.logger.info('wuqimituFun.mission')
     generalact.rangeclick01(5, 1445, 980)  # 危机管理
     generalact.rangeclick02(4, 1750, 832)
+    time.sleep(3)
     generalact.rangeclick02(4, 575, 1030)
 
     generalact.rangeclick02(4, 1612, 922)
@@ -180,7 +181,8 @@ def disichen(AFTD, jiyifengbaoflag, resourceflag):
     if AFTD:
         ######################################################zhuoanzhijin##############################################
         enterdisichen(0)
-        generalact.rangeclick01(4, 586, 647)  # 浊暗之井
+        generalact.rangeclick02(5, 1825, 580)
+        generalact.rangeclick02(5, 1010, 680)  # 浊暗之井
         while 1:
             if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\zhuoanzhijin.bmp', 0.9, 0, 0, 1920, 1080):
                 generalact.rangeclick01(4, 1800, 795)
@@ -213,10 +215,24 @@ def disichen(AFTD, jiyifengbaoflag, resourceflag):
     if resourceflag == 3:
         ######################################################wuranzhicaho##############################################
         enterdisichen(1)
-        generalact.rangeclick01(4, 900, 640)
+        generalact.rangeclick01(4, 860, 477)
         quickbat()
         backtomainui()
         ######################################################wuranzhicaho##############################################
+    if resourceflag == 4:
+        ######################################################jiyusouxun##############################################
+        enterdisichen(1)
+        generalact.rangeclick01(4, 1030, 477)
+        generalact.rangeclick01(4, 1345, 720)
+        quickbat()
+        backtomainui()
+        if not AFTD:
+            enterdisichen(1)
+            generalact.rangeclick01(4, 1030, 477)
+            generalact.rangeclick01(4, 1345, 720)
+            quickbat()
+            backtomainui()
+        ######################################################jiyusouxun##############################################
     if resourceflag == 7:
         ######################################################wuranzhicaho##############################################
         if AFTD:
@@ -245,7 +261,7 @@ def quickbat3():
 
 
 def quickbat():
-    generalact.rangeclick01(4, 1620, 710)
+    generalact.rangeclick01(4, 1680, 710)
     generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\quickbat.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\quickbat_start.bmp', 0.9, 0, 0, 1920, 1080)
 
@@ -400,9 +416,13 @@ def clickblock():
 
 
 def fortest():
-    enterdisichen(1)
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\jisicheng_jiyifengbao.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.moveclick_1s(1575, 915)
-    quickbat()
+    enterdisichen(0)
+    generalact.rangeclick02(5, 1825, 580)
+    generalact.rangeclick02(5, 1010, 680)  # 浊暗之井
+    while 1:
+        if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\zhuoanzhijin.bmp', 0.9, 0, 0, 1920, 1080):
+            generalact.rangeclick01(4, 1800, 795)
+            break
+        generalact.moveclick_2s(960, 940)
     backtomainui()
 

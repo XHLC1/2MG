@@ -278,7 +278,7 @@ def shopMW():
         generalact.imgcorrdinatefunde1('CounterSide\\changzhuxiandinglibao.bmp', 0.9, 0, 0, 1920, 1080)
         CSauto.press("down")
         generalact.imgcorrdinatefunde1('CounterSide\\mimiguyongzuanshilibao.bmp', 0.9, 0, 0, 1920, 1080)
-        generalact.moveclick_05s(1100, 858)
+        generalact.moveclick_05s(1043, 904)
         backtomainui()
 
 

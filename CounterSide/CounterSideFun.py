@@ -15,6 +15,7 @@ tmp = open('yanhuacanzhao.png', 'wb')  # 创建临时的文件
 tmp.write(base64.b64decode(yanhuacanzhao))  # 把这个one图片解码出来，写入文件中去。
 tmp.close()
 
+LOhuodongflag, LOresourceflag = 0, 3
 
 def dailytaskst():
     guild()
@@ -448,8 +449,10 @@ def completeup():  # 探索
         explore_back()
         if count > 100:
             MUMUBACK1()
-            LOPCFun.expedition()
+            LOPCFun.expedition(LOhuodongflag)
             CSBACK()
+            if generalact.imgcorrdinatefuncount3P('CounterSide\\guanlisehshi.bmp', 0.9, 0, 0, 1980, 1080):
+                back1()
             if generalact.imgcorrdinatefuncount3P('CounterSide\\tuanduifubenbianji.bmp', 0.9, 0, 0, 1980, 1080):
                 generalact.moveclick_1s(200, 845)
                 if generalact.imgcorrdinatefuncount3('CounterSide\\explore_tuanben.bmp', 0.8, 0, 0, 600, 400):
@@ -638,7 +641,7 @@ def MUMUBACK1():
 
 
 def test():
-    LOPCFun.expedition()
+    LOPCFun.expedition(LOhuodongflag)
     pass
 
 # backtomainui()
