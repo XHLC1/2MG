@@ -154,7 +154,7 @@ def skipbattleup10():
 
 
 def queren():
-    generalact.imgcorrdinatefunenter('CounterSide\\queren.bmp', 0.9, 0, 0, 1920, 1080, 0, 0)
+    generalact.ImgShiftWhileDelay1Cdelay1('CounterSide\\queren.bmp', 0.9, 0, 0, 1920, 1080, 0, 0)
     for i in range(4):
         generalact.moveclick_02s(1034, 932)
 
@@ -176,10 +176,9 @@ def shop(flashflag):
 
 
 def shopbuyup():
-    # generalact.imgcorrdinatefunshift('CounterSide\\coinupde.bmp', 0.8, 711, 294, 300, 100, 0, 0)
-    # generalact.imgcorrdinatefunwhile('CounterSide\\coinupde.bmp', 0.8, 711, 294, 1060, 425)
-    generalact.imgcorrdinatefun3('CounterSide\\coinup.bmp', 0.6, 711, 294, 400, 200)
-    generalact.imgcorrdinatefun3('CounterSide\\coinup.bmp', 0.6, 1056, 294, 400, 200)
+    # generalact.ImgWhile('CounterSide\\coinupde.bmp', 0.8, 711, 294, 1060, 425)
+    generalact.ImgFor3Cdelay1('CounterSide\\coinup.bmp', 0.6, 711, 294, 400, 200)
+    generalact.ImgFor3Cdelay1('CounterSide\\coinup.bmp', 0.6, 1056, 294, 400, 200)
     # generalact.moveclick_1s(1127, 801)
     generalact.moveclick_05s(1777, 992)
     generalact.moveclick_05s(1072, 894)
@@ -196,9 +195,9 @@ def shopbuydw():
         y += 280
     # generalact.moveclick_05s(1777, 992)
     # generalact.moveclick_05s(1072, 894)
-    # generalact.imgcorrdinatefunenter('CounterSide\\coindw.bmp', 0.9, 350 + x, 280 + y, 1400, 1050, 0, 0)
+    # generalact.ImgShiftWhileDelay1Cdelay1('CounterSide\\coindw.bmp', 0.9, 350 + x, 280 + y, 1400, 1050, 0, 0)
     # generalact.moveclick_1s(1127, 801)
-    # generalact.imgcorrdinatefunenter('CounterSide\\coindw.bmp', 0.9, 350, 750, 1400, 1050, 0, 0)
+    # generalact.ImgShiftWhileDelay1Cdelay1('CounterSide\\coindw.bmp', 0.9, 350, 750, 1400, 1050, 0, 0)
     # generalact.moveclick_1s(1127, 801)
 
 
@@ -206,17 +205,17 @@ def shopMW():
     print('CounterSideFun.shopMW')
     if generalact.firstDayOfMonth():
         pass
-    #     generalact.imgcorrdinatefunde1('CounterSide\\shop.bmp', 0.9, 0, 0, 1920, 1080)
-    #     generalact.imgcorrdinatefunde1('CounterSide\\shoplist.bmp', 0.9, 0, 0, 1920, 1080)
+    #     generalact.ImgWhileDelay1Cdelay1('CounterSide\\shop.bmp', 0.9, 0, 0, 1920, 1080)
+    #     generalact.ImgWhileDelay1Cdelay1('CounterSide\\shoplist.bmp', 0.9, 0, 0, 1920, 1080)
     if generalact.firstDayOfWeek():
-        generalact.imgcorrdinatefunde1('CounterSide\\shop.bmp', 0.9, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunde1('CounterSide\\shoplist.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\shop.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\shoplist.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_1s(786, 673)  # 交换所
         generalact.moveclick_1s(131, 388)  # 便利道具
         for i in range(20):
             CSauto.press("right")
         generalact.moveclick_1s(1020, 804)  # 融合核心
-        if generalact.imgcorrdinatefuncount3('CounterSide\\ronghehexin.bmp', 0.9, 0, 0, 1920, 1080):
+        if generalact.ImgReturn1For3('CounterSide\\ronghehexin.bmp', 0.9, 0, 0, 1920, 1080):
             generalact.moveclick_05s(1071, 691)
             generalact.moveclick_05s(1083, 808)
         else:
@@ -256,11 +255,11 @@ def shopMW():
         shopMWbuy()
         generalact.moveclick_05s(896, 800)
         shopMWbuy()
-        generalact.imgcorrdinatefunde1('CounterSide\\shoplist.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\shoplist.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_05s(1139, 645)
-        generalact.imgcorrdinatefunde1('CounterSide\\changzhuxiandinglibao.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\changzhuxiandinglibao.bmp', 0.9, 0, 0, 1920, 1080)
         CSauto.press("down")
-        generalact.imgcorrdinatefunde1('CounterSide\\mimiguyongzuanshilibao.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\mimiguyongzuanshilibao.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_05s(1100, 858)
         backtomainui()
 
@@ -297,14 +296,14 @@ def shengkai(shengkaiflag):
     else:
         if generalact.firstDayOfWeek():
             generalact.moveclick_4s(1411, 822)  # 圣凯
-            generalact.imgcorrdinatefunde1('CounterSide\\PVPauto.bmp', 0.8, 0, 0, 1920, 1080)
+            generalact.ImgWhileDelay1Cdelay1('CounterSide\\PVPauto.bmp', 0.8, 0, 0, 1920, 1080)
             backtomainui()
         generalact.moveclick_4s(1411, 822)  # 圣凯
-        generalact.imgcorrdinatefunde1('CounterSide\\PVPauto.bmp', 0.8, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunde1('CounterSide\\PVPnpc.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\PVPauto.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\PVPnpc.bmp', 0.8, 0, 0, 1920, 1080)
         generalact.moveclick_1s(1238, 649)
-        generalact.imgcorrdinatefunde1('CounterSide\\PVPstart.bmp', 0.8, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunenter('CounterSide\\zhandoutongji.bmp', 0.9, 0, 0, 1920, 1080, -600, 0)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\PVPstart.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.ImgShiftWhileDelay1Cdelay1('CounterSide\\zhandoutongji.bmp', 0.9, 0, 0, 1920, 1080, -600, 0)
         time.sleep(2)
         CSauto.click()
         time.sleep(2)
@@ -322,8 +321,8 @@ def shengkai(shengkaiflag):
 def shengkaibattle(counter):
     for i in range(counter):
         generalact.moveclick_1s(1238, 649)
-        generalact.imgcorrdinatefunde1('CounterSide\\PVPstart.bmp', 0.8, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunenter('CounterSide\\zhandoutongji.bmp', 0.9, 0, 0, 1920, 1080, -600, 0)
+        generalact.ImgWhileDelay1Cdelay1('CounterSide\\PVPstart.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.ImgShiftWhileDelay1Cdelay1('CounterSide\\zhandoutongji.bmp', 0.9, 0, 0, 1920, 1080, -600, 0)
         time.sleep(2)
         CSauto.click()
         time.sleep(2)
@@ -336,7 +335,7 @@ def employee():
     generalact.moveclick_3s(1801, 989)  # 雇佣
     generalact.moveclick_1s(317, 255)
     while 1:
-        if generalact.imgcorrdinatefuncount('CounterSide\\suishiguyong.bmp', 0.9, 450, 400, 1100, 900) == 1:
+        if generalact.ImgReturn1For5('CounterSide\\suishiguyong.bmp', 0.9, 450, 400, 1100, 900) == 1:
             generalact.moveclick_1s(1238, 1012)
             generalact.moveclick_1s(1118, 821)
             break
@@ -359,7 +358,7 @@ def completeup():  # 探索
         if dispatchflag > 0:
             dispatchflag -= 1
             generalact.moveclick_1s(227, 854)
-            if generalact.imgcorrdinatefuncount3('CounterSide\\explore_tuanben.bmp', 0.8, 0, 0, 1920, 1080):
+            if generalact.ImgReturn1For3('CounterSide\\explore_tuanben.bmp', 0.8, 0, 0, 1920, 1080):
                 if teamflag == 0:
                     generalact.moveclick_1s(1616, 286)
                     generalact.moveclick_1s(1168, 774)
@@ -369,15 +368,15 @@ def completeup():  # 探索
                     generalact.moveclick_1s(707, 906)
                     generalact.moveclick_1s(1067, 807)
                     generalact.escdelay_1s()
-            if generalact.imgcorrdinatefuncount3('CounterSide\\explore_yueru.bmp', 0.8, 0, 0, 1920, 1080):
+            if generalact.ImgReturn1For3('CounterSide\\explore_yueru.bmp', 0.8, 0, 0, 1920, 1080):
                 generalact.moveclick_3s(1652, 387)
                 generalact.moveclick_3s(1538, 1013)
                 completeconfirmwhile()
             else:
                 generalact.escdelay_1s()
-        exploreflag, imgcoordinate = generalact.imgcorrdinatefunenterreturn('CounterSide\\Complete.bmp',
+        exploreflag, imgcoordinate = generalact.ImgReturn2For6('CounterSide\\Complete.bmp',
                                                                             0.5, 0, 0, 1920, 1080)
-        exploreflag1, imgcoordinate1 = generalact.imgcorrdinatefunenterreturn('CounterSide\\CompleteQW.bmp',
+        exploreflag1, imgcoordinate1 = generalact.ImgReturn2For6('CounterSide\\CompleteQW.bmp',
                                                                               0.8, 0, 0, 1920, 1080)
         if exploreflag == 1:
             dispatchflag += 1
@@ -388,12 +387,12 @@ def completeup():  # 探索
             time.sleep(8)
             generalact.moveclick_1s(imgcoordinate.x - 20, imgcoordinate.y + 150)
             while 1:
-                if generalact.imgcorrdinatefuncount3('CounterSide\\explore_reward.bmp', 0.8, 1440, 888, 1920, 1080):
-                    generalact.imgcorrdinatefunde1('CounterSide\\explore_reward.bmp', 0.8, 1440, 888, 1920, 1080)
+                if generalact.ImgReturn1For3('CounterSide\\explore_reward.bmp', 0.8, 1440, 888, 1920, 1080):
+                    generalact.ImgWhileDelay1Cdelay1('CounterSide\\explore_reward.bmp', 0.8, 1440, 888, 1920, 1080)
                     generalact.rangeclick02(4, 1111, 900)
                     break
                 for i in range(3):
-                    guyongjuanflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn(
+                    guyongjuanflag, imgcoordinate = generalact.ImgReturn2For5(
                         'CounterSide\\guyongjuan.bmp',
                         0.9, 1060, 750, 1900, 950)
                 if guyongjuanflag == 1:
@@ -401,14 +400,14 @@ def completeup():  # 探索
                     completecfm()
                     break
                 for i in range(3):
-                    diamondflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn('CounterSide\\diamond.bmp',
+                    diamondflag, imgcoordinate = generalact.ImgReturn2For5('CounterSide\\diamond.bmp',
                                                                                         0.9, 1481, 750, 1900, 950)
                 if diamondflag == 1:
                     generalact.moveclick_1s(imgcoordinate.x - 20, imgcoordinate.y - 150)
                     completecfm()
                     break
                 for i in range(3):
-                    monijuanflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn('CounterSide\\monijuan.bmp',
+                    monijuanflag, imgcoordinate = generalact.ImgReturn2For5('CounterSide\\monijuan.bmp',
                                                                                          0.9, 1060, 750, 420, 250)
                 if monijuanflag == 1:
                     generalact.moveclick_1s(imgcoordinate.x - 20, imgcoordinate.y - 150)
@@ -427,12 +426,12 @@ def completeup():  # 探索
             time.sleep(8)
             generalact.moveclick_1s(imgcoordinate1.x - 20, imgcoordinate1.y + 150)
             while 1:
-                if generalact.imgcorrdinatefuncount3('CounterSide\\explore_reward.bmp', 0.8, 1440, 888, 1920, 1080):
-                    generalact.imgcorrdinatefunde1('CounterSide\\explore_reward.bmp', 0.8, 1440, 888, 1920, 1080)
+                if generalact.ImgReturn1For3('CounterSide\\explore_reward.bmp', 0.8, 1440, 888, 1920, 1080):
+                    generalact.ImgWhileDelay1Cdelay1('CounterSide\\explore_reward.bmp', 0.8, 1440, 888, 1920, 1080)
                     generalact.rangeclick02(4, 1111, 900)
                     break
                 for i in range(3):
-                    guyongjuanflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn(
+                    guyongjuanflag, imgcoordinate = generalact.ImgReturn2For5(
                         'CounterSide\\guyongjuan.bmp',
                         0.9, 1060, 750, 1900, 950)
                 if guyongjuanflag == 1:
@@ -440,14 +439,14 @@ def completeup():  # 探索
                     completecfm()
                     break
                 for i in range(3):
-                    diamondflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn('CounterSide\\diamond.bmp',
+                    diamondflag, imgcoordinate = generalact.ImgReturn2For5('CounterSide\\diamond.bmp',
                                                                                         0.9, 1481, 750, 1900, 950)
                 if diamondflag == 1:
                     generalact.moveclick_1s(imgcoordinate.x - 20, imgcoordinate.y - 150)
                     completecfm()
                     break
                 for i in range(3):
-                    monijuanflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn('CounterSide\\monijuan.bmp',
+                    monijuanflag, imgcoordinate = generalact.ImgReturn2For5('CounterSide\\monijuan.bmp',
                                                                                          0.9, 1060, 750, 1900, 950)
                 if monijuanflag == 1:
                     generalact.moveclick_1s(imgcoordinate.x - 20, imgcoordinate.y - 150)
@@ -459,7 +458,7 @@ def completeup():  # 探索
                 completecfm()
         explore_back()
         if count > 50:
-            if generalact.imgcorrdinatefuncount3('CounterSide\\tuanduifubenbianji.bmp', 0.9, 0, 0, 1980, 1080):
+            if generalact.ImgReturn1For3('CounterSide\\tuanduifubenbianji.bmp', 0.9, 0, 0, 1980, 1080):
                 generalact.moveclick_1s(200, 845)
                 generalact.moveclick_1s(235, 515)
                 generalact.moveclick_1s(1800, 157)
@@ -469,17 +468,17 @@ def completeup():  # 探索
 
 
 def explore_back():
-    if generalact.imgcorrdinatefuncount3('CounterSide\\explore_back.bmp', 0.9, 0, 0, 400, 400):
+    if generalact.ImgReturn1For3('CounterSide\\explore_back.bmp', 0.9, 0, 0, 400, 400):
         generalact.moveclick_1s(1700, 830)
 
 
 def completedw():
-    generalact.imgcorrdinatefunenter('CounterSide\\CompleteQW.bmp', 0.9, 0, 0, 1920, 1080, -20, 150)
+    generalact.ImgShiftWhileDelay1Cdelay1('CounterSide\\CompleteQW.bmp', 0.9, 0, 0, 1920, 1080, -20, 150)
 
 
 def completeconfirm():
     while 1:
-        if generalact.imgcorrdinatefuncount('CounterSide\\tuanduifubenbianji.bmp', 0.9, 0, 780, 400, 1080) == 1:
+        if generalact.ImgReturn1For5('CounterSide\\tuanduifubenbianji.bmp', 0.9, 0, 780, 400, 1080) == 1:
             generalact.moveclick_1s(1108, 809)
             break
         else:
@@ -488,7 +487,7 @@ def completeconfirm():
 
 
 def completeconfirmwhile():
-    generalact.imgcorrdinatefunwhile('CounterSide\\tuanduifubenbianji.bmp', 0.9, 0, 780, 400, 1080)
+    generalact.ImgWhile('CounterSide\\tuanduifubenbianji.bmp', 0.9, 0, 780, 400, 1080)
 
 
 def completecfm():
@@ -498,8 +497,8 @@ def completecfm():
 
 def backtomainui():
     while 1:
-        # if generalact.imgcorrdinatefuncount('CounterSide\\yanhuacanzhao.bmp', 0.9, 560, 120, 1500, 400) == 1:
-        if generalact.imgcorrdinatefuncount('CounterSide\\xingheluo.bmp', 0.9, 560, 120, 1500, 400) == 1:
+        # if generalact.ImgReturn1For5('CounterSide\\yanhuacanzhao.bmp', 0.9, 560, 120, 1500, 400) == 1:
+        if generalact.ImgReturn1For5('CounterSide\\xingheluo.bmp', 0.9, 560, 120, 1500, 400) == 1:
             back3()
             break
         else:
@@ -530,7 +529,7 @@ def back3():
 # def test():
 #     while 1:
 #         for i in range(3):
-#             guyongjuanflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn(
+#             guyongjuanflag, imgcoordinate = generalact.ImgReturn1For5(
 #                 'CounterSide\\guyongjuan.bmp',
 #                 0.9, 1060, 750, 1900, 950)
 #         if guyongjuanflag == 1:
@@ -538,14 +537,14 @@ def back3():
 #             completecfm()
 #             break
 #         for i in range(3):
-#             diamondflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn('CounterSide\\diamond.bmp',
+#             diamondflag, imgcoordinate = generalact.ImgReturn1For5('CounterSide\\diamond.bmp',
 #                                                                                 0.9, 1481, 750, 1900, 950)
 #         if diamondflag == 1:
 #             generalact.moveclick_1s(imgcoordinate.x - 20, imgcoordinate.y - 150)
 #             completecfm()
 #             break
 #         for i in range(3):
-#             monijuanflag, imgcoordinate = generalact.imgcorrdinatefuncountreturn('CounterSide\\monijuan.bmp',
+#             monijuanflag, imgcoordinate = generalact.ImgReturn1For5('CounterSide\\monijuan.bmp',
 #                                                                                  0.9, 1060, 750, 1900, 950)
 #         if monijuanflag == 1:
 #             generalact.moveclick_1s(imgcoordinate.x - 20, imgcoordinate.y - 150)

@@ -43,19 +43,19 @@ def dailytaskst(AFTD, huodongflag, resourceflag, QXZLflag):
 
 def enterQNZLfun():
     generalact.logger.info('QNZLfun.enterQNZLfunF')
-    generalact.imgcorrdinatefunenter('QNZL\\QNZL.bmp', 0.9, 0, 0, 1920, 1080, 0, -40)
+    generalact.ImgShiftWhileDelay1Cdelay1('QNZL\\QNZL.bmp', 0.9, 0, 0, 1920, 1080, 0, -40)
     n = 0
     a = 1
     while a:
-        if generalact.imgcorrdinatefunclickcount3('QNZL\\StartQNZL.bmp', 0.8, 0, 0, 1920, 1080):
+        if generalact.ImgFor3Cdelay1('QNZL\\StartQNZL.bmp', 0.8, 0, 0, 1920, 1080):
             time.sleep(20)
             back1()
-            if generalact.imgcorrdinatefuncount3('QNZL\\eventnotice.bmp', 0.9, 800, 0, 1920, 1080):
+            if generalact.ImgReturn1For3('QNZL\\eventnotice.bmp', 0.9, 800, 0, 1920, 1080):
                 generalact.moveclick_1s(1826, 160)
             time.sleep(5)
             generalact.rangeclick02(5, 1690, 260)
             while 1:
-                if generalact.imgcorrdinatefuncount('QNZL\\UID.bmp', 0.9, 0, 0, 1920, 1080):
+                if generalact.ImgReturn1For5('QNZL\\UID.bmp', 0.9, 0, 0, 1920, 1080):
                     time.sleep(1)
                     a = 0
                     break
@@ -66,23 +66,23 @@ def enterQNZLfun():
                     n += 1
                     if n >= 60:
                         generalact.MUMUclose1()
-                        generalact.imgcorrdinatefunshiftclickcount3('QNZL\\QNZL.bmp', 0.8, 0, 0, 1920, 1080, 0, -40)
+                        generalact.ImgShiftFor3Cdelay1('QNZL\\QNZL.bmp', 0.8, 0, 0, 1920, 1080, 0, -40)
                         n = 0
                         break
         else:
             time.sleep(1)
             n += 1
             if n >= 60:
-                generalact.imgcorrdinatefunshiftclickcount3('QNZL\\QNZL.bmp', 0.8, 0, 0, 1920, 1080, 0, -40)
+                generalact.ImgShiftFor3Cdelay1('QNZL\\QNZL.bmp', 0.8, 0, 0, 1920, 1080, 0, -40)
                 n = 0
     backtomainui()
 
 
 def KLLMX():
     generalact.moveclick_1s(102, 427)
-    generalact.imgcorrdinatefunwhile('QNZL\\KLLMX.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('QNZL\\KLLMX.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.moveclick_1s(1712, 866)
-    generalact.imgcorrdinatefunwhile('QNZL\\KLLMX_item.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('QNZL\\KLLMX_item.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.moveclick_1s(950, 900)
     backtomainui()
 
@@ -90,22 +90,22 @@ def KLLMX():
 def shop():
     generalact.logger.info('QNZLfun.shop')
     generalact.moveclick_1s(1428, 960)
-    generalact.imgcorrdinatefunde1('QNZL\\shopgift.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\shopgift.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_1s(900, 400)
-    generalact.imgcorrdinatefun('QNZL\\buy.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\buy.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick02(4, 980, 150)
     if generalact.firstDayOfWeek():
         generalact.moveclick_1s(900, 400)
-        generalact.imgcorrdinatefun('QNZL\\buy.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileCdelay1('QNZL\\buy.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.rangeclick02(4, 980, 150)
     if generalact.firstDayOfMonth():
         generalact.moveclick_1s(900, 400)
-        generalact.imgcorrdinatefun('QNZL\\buy.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileCdelay1('QNZL\\buy.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.rangeclick02(4, 980, 150)
     generalact.moveclick_1s(1473, 1031)  # 兌換商店
     for i in range(8):
         generalact.moveclick_1s(900, 400)
-        if generalact.imgcorrdinatefuncount3('QNZL\\coin.bmp', 0.9, 800, 200, 1920, 1080):
+        if generalact.ImgReturn1For3('QNZL\\coin.bmp', 0.9, 800, 200, 1920, 1080):
             generalact.moveclick_1s(1287, 876)
             generalact.rangeclick02(4, 980, 150)
         else:
@@ -114,7 +114,7 @@ def shop():
     generalact.moveclick_1s(600, 750)  # 友情商店
     generalact.moveclick_1s(1750, 165)
     if generalact.firstDayOfMonth():
-        generalact.imgcorrdinatefun('QNZL\\shop_blue.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileCdelay1('QNZL\\shop_blue.bmp', 0.9, 0, 0, 1920, 1080)
         for i in range(2):
             generalact.moveclick_1s(900, 400)
             generalact.moveclick_1s(1170, 760)  # MAX
@@ -125,7 +125,7 @@ def shop():
         generalact.moveclick_1s(1287, 876)
         generalact.rangeclick02(4, 980, 150)
     if generalact.firstDayOfWeek():
-        generalact.imgcorrdinatefun('QNZL\\MYshop.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileCdelay1('QNZL\\MYshop.bmp', 0.9, 0, 0, 1920, 1080)
         for i in range(2):
             generalact.moveclick_1s(1150, 425)
             generalact.moveclick_1s(1170, 760)  # MAX
@@ -135,7 +135,7 @@ def shop():
 
 
 def shop_t():
-    generalact.imgcorrdinatefun('QNZL\\MYshop.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\MYshop.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_1s(1150, 425)
     generalact.moveclick_1s(1170, 760)  # MAX
     generalact.moveclick_1s(1287, 876)
@@ -159,21 +159,21 @@ def batattack(huodongflag):
     if generalact.firstDayOfWeek7():
         generalact.moveclick_1s(1660, 900)
         generalact.rangeclick02(5, 1100, 1040)
-        generalact.imgcorrdinatefunde1('QNZL\\attack_gate.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_gate.bmp', 0.8, 0, 0, 1920, 1080)
         generalact.moveclick_2s(1200, 270)
         generalact.moveclick_1s(1800, 435)
-        generalact.imgcorrdinatefun('QNZL\\attack_quick.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.ImgWhileCdelay1('QNZL\\attack_quick.bmp', 0.8, 0, 0, 1920, 1080)
         if huodongflag:
             generalact.moveclick_05s(1655, 851)
         else:
             generalact.moveclick_05s(1752, 852)  # max
         generalact.moveclick_05s(1640, 1010)
-        if generalact.imgcorrdinatefun3('QNZL\\attack_confirm.bmp', 0.8, 0, 0, 1920, 1080):
+        if generalact.ImgFor3Cdelay1('QNZL\\attack_confirm.bmp', 0.8, 0, 0, 1920, 1080):
             pass
         else:
             generalact.rangeclick02(2, 1816, 915)
         time.sleep(3)
-        if generalact.imgcorrdinatefun3('QNZL\\attack_confirm.bmp', 0.8, 0, 0, 1920, 1080):
+        if generalact.ImgFor3Cdelay1('QNZL\\attack_confirm.bmp', 0.8, 0, 0, 1920, 1080):
             pass
         else:
             generalact.rangeclick02(2, 1816, 915)
@@ -182,35 +182,35 @@ def batattack(huodongflag):
     else:
         generalact.moveclick_1s(1660, 900)
         generalact.rangeclick02(5, 1100, 1040)
-        generalact.imgcorrdinatefunde1('QNZL\\attack_gate.bmp', 0.9, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunde1('QNZL\\attack_double.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_gate.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_double.bmp', 0.9, 0, 0, 1920, 1080)
         time.sleep(1)
         generalact.moveclick_1s(1800, 435)
-        generalact.imgcorrdinatefun('QNZL\\attack_quick.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileCdelay1('QNZL\\attack_quick.bmp', 0.9, 0, 0, 1920, 1080)
         if huodongflag:
             generalact.moveclick_05s(1655, 851)
         else:
             generalact.moveclick_05s(1752, 852)  # max
         generalact.moveclick_05s(1640, 1010)
         generalact.rangeclick02(10, 1654, 1012)
-        generalact.imgcorrdinatefunde1('QNZL\\attack_confirm.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_confirm.bmp', 0.9, 0, 0, 1920, 1080)
         home()
         backtomainui()
         generalact.moveclick_1s(1660, 900)
         generalact.rangeclick02(5, 1100, 1040)
-        generalact.imgcorrdinatefunde1('QNZL\\attack_gate.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_gate.bmp', 0.9, 0, 0, 1920, 1080)
         for i in range(2):
             generalact.dragmouse(1325, 950, 1325, 170)
-        generalact.imgcorrdinatefunde1('QNZL\\MEETINGPLACE.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\MEETINGPLACE.bmp', 0.9, 0, 0, 1920, 1080)
         time.sleep(1)
         generalact.moveclick_1s(430, 700)  # 2
         # generalact.moveclick_1s(995, 695)  # 4
         # generalact.moveclick_1s(1540, 700)  # 6
-        generalact.imgcorrdinatefun('QNZL\\attack_quick.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileCdelay1('QNZL\\attack_quick.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_05s(1752, 852)  # max
         generalact.moveclick_05s(1640, 1010)
         generalact.rangeclick02(10, 1654, 1012)
-        generalact.imgcorrdinatefunde1('QNZL\\attack_confirm.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_confirm.bmp', 0.9, 0, 0, 1920, 1080)
         home()
         backtomainui()
 
@@ -218,7 +218,7 @@ def batattack(huodongflag):
 def resource(resourceflag):
     generalact.moveclick_1s(1660, 900)
     generalact.rangeclick02(5, 1100, 1040)
-    generalact.imgcorrdinatefunde1('QNZL\\attack_gate.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_gate.bmp', 0.9, 0, 0, 1920, 1080)
     if resourceflag == 0:  # 钱
         generalact.moveclick_1s(1090, 290)
     if resourceflag == 1:  # 经验
@@ -232,11 +232,11 @@ def resource(resourceflag):
         generalact.moveclick_1s(1580, 710)  # 6
     else:
         generalact.moveclick_1s(1800, 435)  # 7
-    generalact.imgcorrdinatefun('QNZL\\attack_quick.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\attack_quick.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_05s(1752, 852)  # max
     generalact.moveclick_05s(1640, 1010)
     generalact.rangeclick02(10, 1654, 1012)
-    generalact.imgcorrdinatefunde1('QNZL\\attack_confirm.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_confirm.bmp', 0.9, 0, 0, 1920, 1080)
     home()
     backtomainui()
 
@@ -244,22 +244,22 @@ def resource(resourceflag):
 def division():
     generalact.logger.info('QNZLfun.division')
     generalact.moveclick_05s(1211, 963)
-    generalact.imgcorrdinatefunde1('QNZL\\divsion_affirm.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\divsion_affirm.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_1s(1550, 300)
     generalact.rangeclick02(4, 980, 100)
     generalact.moveclick_1s(1120, 980)
-    generalact.imgcorrdinatefunde1('QNZL\\divsion_activity.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\divsion_activity.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_1s(1800, 245)
-    generalact.imgcorrdinatefunde1('QNZL\\divsion_change.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\divsion_change2.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\divsion_change3.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefun3('QNZL\\divsion_confirm.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\divsion_change.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\divsion_change2.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\divsion_change3.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('QNZL\\divsion_confirm.bmp', 0.9, 0, 0, 1920, 1080)
     time.sleep(2)
     back1()
-    generalact.imgcorrdinatefunde1('QNZL\\divsion_restroom.bmp', 0.9, 1080, 900, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\divsion_restroom2.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\divsion_restroom.bmp', 0.9, 1080, 900, 1920, 1080)
+    generalact.ImgWhile('QNZL\\divsion_restroom2.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_1s(1650, 1010)
-    # generalact.imgcorrdinatefunde1('QNZL\\divsion_playroom.bmp', 0.9, 0, 0, 1920, 1080)
+    # generalact.ImgWhileDelay1Cdelay1('QNZL\\divsion_playroom.bmp', 0.9, 0, 0, 1920, 1080)
     # generalact.moveclick_1s(1675, 1000)
     home()
     backtomainui()
@@ -268,9 +268,9 @@ def division():
 def divisionwitch():
     generalact.logger.info('QNZLfun.divisionwitch')
     # generalact.moveclick_05s(1211, 963)
-    generalact.imgcorrdinatefunde1('QNZL\\divsionwitch_KURORO.bmp', 0.9, 150, 886, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\divsion_MN_KLL.bmp', 0.7, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\divsion_MN_interact.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\divsionwitch_KURORO.bmp', 0.9, 150, 886, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\divsion_MN_KLL.bmp', 0.7, 0, 0, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\divsion_MN_interact.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick01(6, 565, 520)
     generalact.rangeclick01(6, 827, 523)
     generalact.rangeclick01(6, 1075, 552)
@@ -279,12 +279,12 @@ def divisionwitch():
 def startrace():
     generalact.logger.info('QNZLfun.startrace')
     generalact.moveclick_1s(573, 960)
-    generalact.imgcorrdinatefunde1('QNZL\\startrace.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\startrace.bmp', 0.9, 0, 0, 1920, 1080)
     for i in range(5):
         generalact.dragmouse(1752, 613, 223, 613)
     generalact.moveclick_1s(1573, 256)  # 1
     # generalact.moveclick_1s(1573, 827)  # 3
-    generalact.imgcorrdinatefunwhile('QNZL\\startrace_break.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhile('QNZL\\startrace_break.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_2s(290, 1000)
     generalact.moveclick_05s(1171, 702)
     generalact.moveclick_05s(1544, 973)
@@ -294,17 +294,17 @@ def startrace():
 
 def guild():
     generalact.logger.info('QNZLfun.guild')
-    generalact.imgcorrdinatefunde1('QNZL\\guild.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\guild.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick02(5, 1000, 600)
-    generalact.imgcorrdinatefunde1('QNZL\\guild_doinet.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\guild_doinet.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick01(20, 1522, 820)
-    generalact.imgcorrdinatefunde1('QNZL\\guild_member.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\guild_member.bmp', 0.9, 0, 0, 1920, 1080)
     for i in range(3):
-        generalact.imgcorrdinatefunde1('QNZL\\guild_good.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\guild_good.bmp', 0.9, 0, 0, 1920, 1080)
         clickblock()
-        generalact.imgcorrdinatefunde1('QNZL\\guild_member.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\guild_member.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.dragmouse_count(1150, 900, 1150, 180, i)
-    generalact.imgcorrdinatefunde1('QNZL\\guild_quest.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\guild_quest.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick01(30, 1640, 400)
     for i in range(6):
         generalact.rangeclick01(6, 900 + 165*i, 850)
@@ -322,7 +322,7 @@ def home():
 
 def backtomainui():
     while 1:
-        if generalact.imgcorrdinatefuncount('QNZL\\UID.bmp', 0.9, 0, 0, 1920, 1080):
+        if generalact.ImgReturn1For5('QNZL\\UID.bmp', 0.9, 0, 0, 1920, 1080):
             time.sleep(1)
             break
         else:
@@ -349,26 +349,26 @@ def HMZJ():
     generalact.logger.info('QNZLfun.HMZJ')
     generalact.moveclick_1s(1660, 900)
     generalact.rangeclick02(5, 815, 1033)
-    generalact.confirm_nocilck3('QNZL\\HMZJ\\mission.bmp', 815, 1030)
-    generalact.confirm_cilck3('QNZL\\HMZJ\\MMMY.bmp', 1090, 225)
+    generalact.ImgReturn1For3_Confirm('QNZL\\HMZJ\\mission.bmp', 815, 1030)
+    generalact.ImgFor3Cdelay1_Confirm('QNZL\\HMZJ\\MMMY.bmp', 1090, 225)
     generalact.moveclick_3s(1685, 1000)
     generalact.moveclick_1s(1685, 1000)
-    generalact.imgcorrdinatefunshiftde1('QNZL\\HMZJ\\again.bmp', 0.8, 0, 0, 1920, 1080, 200, 0)
+    generalact.ImgShiftWhileDelay1Cdelay1('QNZL\\HMZJ\\again.bmp', 0.8, 0, 0, 1920, 1080, 200, 0)
     time.sleep(2)
-    generalact.imgcorrdinatefunclickcount3('QNZL\\HMZJ\\confirm.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('QNZL\\HMZJ\\confirm.bmp', 0.8, 0, 0, 1920, 1080)
     clickblock()
     back3()
 
     generalact.dragmouse_count(1150, 900, 1150, 100, 2)
-    generalact.confirm_cilck3('QNZL\\HMZJ\\HWMY.bmp', 1315, 845)
+    generalact.ImgFor3Cdelay1_Confirm('QNZL\\HMZJ\\HWMY.bmp', 1315, 845)
     generalact.moveclick_3s(1685, 1000)
     generalact.moveclick_1s(1685, 1000)
-    generalact.imgcorrdinatefunshiftde1('QNZL\\HMZJ\\again.bmp', 0.8, 0, 0, 1920, 1080, 200, 0)
+    generalact.ImgShiftWhileDelay1Cdelay1('QNZL\\HMZJ\\again.bmp', 0.8, 0, 0, 1920, 1080, 200, 0)
     time.sleep(2)
-    generalact.imgcorrdinatefunclickcount3('QNZL\\HMZJ\\confirm.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('QNZL\\HMZJ\\confirm.bmp', 0.8, 0, 0, 1920, 1080)
     clickblock()
     back3()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\mission.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\mission.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick02(10, 495, 825)
 
 
@@ -376,7 +376,7 @@ def HMZJ_H(choose):
     generalact.logger.info('QNZLfun.HMZJ')
     generalact.moveclick_1s(1660, 900)
     generalact.rangeclick02(5, 815, 1033)
-    generalact.confirm_nocilck3('QNZL\\HMZJ\\mission.bmp', 815, 1030)
+    generalact.ImgReturn1For3_Confirm('QNZL\\HMZJ\\mission.bmp', 815, 1030)
     generalact.moveclick_3s(130, 870)
     if choose == 1:
         generalact.moveclick_3s(1100, 350)  # 1
@@ -384,77 +384,77 @@ def HMZJ_H(choose):
         generalact.moveclick_3s(1100, 650)  # 2
     if choose == 3:
         generalact.moveclick_3s(1100, 950)  # 3
-    generalact.confirm_nocilck3('QNZL\\HMZJ\\HMZJ_H.bmp', 815, 1030)
-    generalact.confirm_cilck3('QNZL\\HMZJ\\HMZJ_H.bmp', 1090, 225)
+    generalact.ImgReturn1For3_Confirm('QNZL\\HMZJ\\HMZJ_H.bmp', 815, 1030)
+    generalact.ImgFor3Cdelay1_Confirm('QNZL\\HMZJ\\HMZJ_H.bmp', 1090, 225)
     for i in range(4):
         generalact.moveclick_1s(1210 + i*110, 845)
         generalact.moveclick_1s(1030, 840)
     generalact.rangeclick02(8, 1510, 1010)
     # 1
-    generalact.imgcorrdinatefunwhile('QNZL\\HMZJ\\NAOMI.bmp', 0.9, 0, 0, 1920, 1080)  # 1
+    generalact.ImgWhile('QNZL\\HMZJ\\NAOMI.bmp', 0.9, 0, 0, 1920, 1080)  # 1
     generalact.moveclick_1s(158, 950)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\NAOMI.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\NAOMI_2.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\NAOMI.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\NAOMI_2.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\ELENA.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\ELENA_3.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\ELENA.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\ELENA_3.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\DANY.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\DANY_1.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\DANY.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\DANY_1.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\ANA.bmp', 0.8, 0, 0, 1920, 1080)  # 2
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\ANA_2.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\ANA.bmp', 0.8, 0, 0, 1920, 1080)  # 2
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\ANA_2.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)  # 3
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\JIYAN_2.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)  # 3
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\JIYAN_2.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
     # 2
-    generalact.imgcorrdinatefunwhile('QNZL\\HMZJ\\NAOMI.bmp', 0.9, 0, 0, 1920, 1080)  # 1
+    generalact.ImgWhile('QNZL\\HMZJ\\NAOMI.bmp', 0.9, 0, 0, 1920, 1080)  # 1
     generalact.moveclick_1s(158, 950)  # P
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\ELENA.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\ELENA_3.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\ELENA.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\ELENA_3.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\NAOMI.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\NAOMI_1.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\NAOMI.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\NAOMI_1.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\STRANGER.bmp', 0.8, 0, 0, 1920, 1080)  # 2
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\STRANGER_2.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\STRANGER.bmp', 0.8, 0, 0, 1920, 1080)  # 2
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\STRANGER_2.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)  # 3
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)  # 3
     generalact.rangeclick02(5, 310, 830)
     # 3
-    generalact.imgcorrdinatefunwhile('QNZL\\HMZJ\\NAOMI.bmp', 0.9, 0, 0, 1920, 1080)  # 1
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\ELENA.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\ELENA_2.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('QNZL\\HMZJ\\NAOMI.bmp', 0.9, 0, 0, 1920, 1080)  # 1
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\ELENA.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\ELENA_2.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunwhile('QNZL\\HMZJ\\NAOMI.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhile('QNZL\\HMZJ\\NAOMI.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick02(5, 160, 750)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\YETANIA.bmp', 0.8, 0, 0, 1920, 1080)  # 2
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\YETANIA_2.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\YETANIA.bmp', 0.8, 0, 0, 1920, 1080)  # 2
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\YETANIA_2.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\STRANGER.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\STRANGER_1.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\STRANGER.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\STRANGER_1.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\RABIA.bmp', 0.8, 0, 0, 1920, 1080)  # 3
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\RABIA_3.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\RABIA.bmp', 0.8, 0, 0, 1920, 1080)  # 3
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\RABIA_3.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\RABIA.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\RABIA2_3.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\RABIA.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\RABIA2_3.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunwhile('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.moveclick_1s(158, 950)  # P
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\JIYAN2_2.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\JIYAN2_2.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
-    generalact.imgcorrdinatefunwhile('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.moveclick_1s(158, 950)  # P
     generalact.moveclick_1s(158, 950)  # P
     generalact.moveclick_1s(158, 950)  # P
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\HMZJ\\JIYAN2_1.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\JIYAN.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\HMZJ\\JIYAN2_1.bmp', 0.8, 0, 0, 1920, 1080)
     CSauto.doubleClick()
     # time.sleep(10)
-    # generalact.imgcorrdinatefunshiftde1('QNZL\\HMZJ\\again.bmp', 0.8, 0, 0, 1920, 1080, 200, 0)
+    # generalact.ImgShiftWhileDelay1Cdelay1('QNZL\\HMZJ\\again.bmp', 0.8, 0, 0, 1920, 1080, 200, 0)
     # time.sleep(2)
     # back3()
 
@@ -463,164 +463,164 @@ def HMZJ_H(choose):
 def Cbattle():
     # round 1
     # generalact.moveclick_1s(400, 977)  # C1
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\Cyetanniya.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\Cyetanniya2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\Cyetanniya2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\Cyetanniya.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KUROKAMI.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\MOMO2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\RITSU.bmp', 0.7, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DANY1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\DANY1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\Cyetanniya.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\Cyetanniya2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\Cyetanniya2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\Cyetanniya.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KUROKAMI.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\MOMO2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\RITSU.bmp', 0.7, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DANY1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\DANY1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
 
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\IRENE1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\IRENE1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\IRENE1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\IRENE1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
 
     generalact.rangeclick02(2, 140, 960)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\NAFIE2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\NAFIE2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\APOPHIS2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\APOPHIS2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\APOPHIS1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\APOPHIS1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\NAFIE2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\NAFIE2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\APOPHIS2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\APOPHIS2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\APOPHIS1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\APOPHIS1.bmp', 0.7, 1650, 250, 1920, 1080)
     # round 2
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DIA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DIA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\DIA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DIA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\DIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
 
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KRSNA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\KRSNA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KRSNA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\KRSNA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
 
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO3.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\MOMO3.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO3.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\MOMO3.bmp', 0.7, 1650, 250, 1920, 1080)
     # round 3
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KURORO.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KURORO.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick02(2, 140, 960)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KRSNA2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\KRSNA2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KRSNA2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\KRSNA2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
 
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DANY1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\DANY1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DANY1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\DANY1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
 
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\NAFIE1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\NAFIE1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\NAFIE1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\NAFIE1.bmp', 0.7, 1650, 250, 1920, 1080)
     # round 4
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DIA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DIA2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\DIA2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\DIA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\GERALDIA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DIA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DIA2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\DIA2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\DIA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\GERALDIA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
 
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\IRENE2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\IRENE2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\Cyetanniya.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\Cyetanniya1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\Cyetanniya1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\IRENE2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\IRENE2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\Cyetanniya.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\Cyetanniya1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\Cyetanniya1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
 
     generalact.rangeclick02(2, 140, 960)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\MOMO1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\MOMO1.bmp', 0.7, 1650, 250, 1920, 1080)
     # round 5
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DIA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\DIA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\DIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DIA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\DIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\DIA1.bmp', 0.7, 1650, 250, 1920, 1080)
 
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\AIKA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\AIKA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\AIKA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\AIKA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\AIKA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\AIKA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\AIKA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\AIKA1.bmp', 0.7, 1650, 250, 1920, 1080)
 
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\APOPHIS2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\APOPHIS2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\APOPHIS1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\APOPHIS1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\APOPHIS2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\APOPHIS2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\APOPHIS.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\APOPHIS1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\APOPHIS1.bmp', 0.7, 1650, 250, 1920, 1080)
     # round 6
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KUROKAMI.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\Cyetanniya.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\Cyetanniya2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\Cyetanniya2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\MOMO2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\DANY.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KUROKAMI.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\Cyetanniya.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\Cyetanniya2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\Cyetanniya2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\MOMO2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
 
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\RITSU.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\GERALDIA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\RITSU.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\GERALDIA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
 
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\KRSNA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\KRSNA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KRSNA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\KRSNA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\KRSNA1.bmp', 0.7, 1650, 250, 1920, 1080)
 
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
     generalact.rangeclick02(3, 140, 960)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\NAFIE2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\NAFIE2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\MOMO3.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\MOMO3.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\NAFIE2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\NAFIE2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\MOMO3.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\MOMO3.bmp', 0.7, 1650, 250, 1920, 1080)
     # round 7
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\GERALDIA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\GERALDIA2.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\GERALDIA2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\GERALDIA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\GERALDIA2.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\GERALDIA2.bmp', 0.7, 1650, 250, 1920, 1080)
 
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\IRENE1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\IRENE1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\IRENE1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\IRENE1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
     skip()
     # round 8
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\GERALDIA.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\GERALDIA.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\GERALDIA1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\IRENE.bmp', 0.7, 250, 850, 1920, 1080)
     generalact.rangeclick1(2, 155, 737)
 
-    generalact.imgcorrdinatefunwhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhile('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
     generalact.rangeclick02(3, 140, 960)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\battle\\NAFIE1.bmp', 0.7, 1650, 250, 1920, 1080)
-    generalact.imgcorrdinatefun('QNZL\\battle\\NAFIE1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\NAFIE.bmp', 0.7, 250, 850, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\battle\\NAFIE1.bmp', 0.7, 1650, 250, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\battle\\NAFIE1.bmp', 0.7, 1650, 250, 1920, 1080)
 
 
 def HMZJmission():
@@ -637,19 +637,19 @@ def attack():
 
 
 def quickbatall():
-    generalact.imgcorrdinatefun('QNZL\\attack_quick.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileCdelay1('QNZL\\attack_quick.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_05s(1752, 852)  # max
     generalact.moveclick_05s(1640, 1010)
     generalact.moveclick_05s(1640, 1010)
     # generalact.moveclick_05s(1660, 730)
     # generalact.moveclick_05s(1380, 830)
-    generalact.imgcorrdinatefunde1('QNZL\\attack_confirm.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\attack_confirm.bmp', 0.9, 0, 0, 1920, 1080)
 
 
 def QXZL(QXZLFLAG):
     if QXZLFLAG:
         generalact.moveclick_1s(105, 330)
-        generalact.imgcorrdinatefunwhile('QNZL\\QXZL.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.ImgWhile('QNZL\\QXZL.bmp', 0.8, 0, 0, 1920, 1080)
         for i in range(4):
             generalact.rangeclick01(4, 1777, 450)
             clickblock()
@@ -663,14 +663,14 @@ def huodongdailyget():
 
 def huodong_JDDS(dialy):  # 记得的事
     generalact.logger.info('QNZLfun.huodong_JDDS')
-    generalact.confirm_nocilck3('QNZL\\huodong\\huodongJDDS\\enterup.bmp', 1430, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongJDDS\\enterup.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgReturn1For3_Confirm('QNZL\\huodong\\huodongJDDS\\enterup.bmp', 1430, 353)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongJDDS\\enterup.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.dragmouse_count(1750, 550, 100, 550, 2)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongJDDS\\20.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongJDDS\\20.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
     back1()
     if dialy == 0:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongJDDS\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongJDDS\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
     backtomainui()
@@ -678,83 +678,83 @@ def huodong_JDDS(dialy):  # 记得的事
 
 def huodong_YRYCF(dialy):  # 与日月重逢
     generalact.logger.info('QNZLfun.huodong_YRYCF')
-    generalact.confirm_nocilck3('QNZL\\huodong\\huodongYRYCF\\enterup.bmp', 1430, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongYRYCF\\enterup.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgReturn1For3_Confirm('QNZL\\huodong\\huodongYRYCF\\enterup.bmp', 1430, 353)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongYRYCF\\enterup.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.dragmouse_count(1750, 550, 100, 550, 2)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongYRYCF\\20.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongYRYCF\\20.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
     back1()
     if dialy == 0:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongYRYCF\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongYRYCF\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
     backtomainui()
 
 
 def huodong_XZMFR(dialy):  # 新枝萌发日
-    generalact.confirm_nocilck3('QNZL\\huodong\\huodongXZMFR\\enterup.bmp', 1430, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongXZMFR\\enterup.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgReturn1For3_Confirm('QNZL\\huodong\\huodongXZMFR\\enterup.bmp', 1430, 353)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongXZMFR\\enterup.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.dragmouse_count(1750, 550, 100, 550, 2)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongXZMFR\\20.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongXZMFR\\20.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
     back1()
     if dialy == 0:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongXZMFR\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongXZMFR\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
     backtomainui()
 
 
 def huodong_ZCDWD(dialy):  # 咫尺的温度
-    generalact.confirm_nocilck3('QNZL\\huodong\\huodongZCDWD\\enterup.bmp', 1430, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongZCDWD\\enterup.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgReturn1For3_Confirm('QNZL\\huodong\\huodongZCDWD\\enterup.bmp', 1430, 353)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongZCDWD\\enterup.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.dragmouse_count(1750, 550, 100, 550, 2)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongZCDWD\\20.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongZCDWD\\20.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
     back1()
     if dialy == 0:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongZCDWD\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongZCDWD\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
     backtomainui()
 
 
 def huodong_MNZY(dialy):  # 魔女之夜
-    generalact.confirm_nocilck3('QNZL\\huodong\\huodongMNZY\\enter.bmp', 1430, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongMNZY\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgReturn1For3_Confirm('QNZL\\huodong\\huodongMNZY\\enter.bmp', 1430, 353)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongMNZY\\enter.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.dragmouse_count(1750, 550, 100, 550, 2)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongMNZY\\28.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongMNZY\\28.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
     back1()
     if dialy == 0:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongMNZY\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongMNZY\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
     backtomainui()
 
 
 def huodong_RHLL(dialy):  # 忍花缭乱
-    generalact.confirm_nocilck3('QNZL\\huodong\\huodongRHLL\\enter.bmp', 1430, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongRHLL\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgReturn1For3_Confirm('QNZL\\huodong\\huodongRHLL\\enter.bmp', 1430, 353)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongRHLL\\enter.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.dragmouse_count(1750, 550, 100, 550, 2)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongRHLL\\10.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongRHLL\\10.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
     back1()
     if dialy == 0:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongRHLL\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongRHLL\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
     backtomainui()
 
 
 def huodong_ZGNAHQ(dialy):  # 知更鸟的安魂曲
-    generalact.confirm_nocilck3('QNZL\\huodong\\huodongZGNAHQ\\enter.bmp', 1430, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongZGNAHQ\\enter.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongZGNAHQ\\2.0.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgReturn1For3_Confirm('QNZL\\huodong\\huodongZGNAHQ\\enter.bmp', 1430, 353)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongZGNAHQ\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongZGNAHQ\\2.0.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
     back1()
     if dialy == 0:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongZGNAHQ\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongZGNAHQ\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
 
@@ -762,25 +762,25 @@ def huodong_ZGNAHQ(dialy):  # 知更鸟的安魂曲
 def huodong_GSDAZS(dialy, huodongshop):  # 瑰色的爱之诗
     generalact.moveclick_1s(1672, 353)
     if huodongshop:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongGSDAZS\\enter.bmp', 0.9, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongGSDAZS\\20.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongGSDAZS\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongGSDAZS\\20.bmp', 0.9, 0, 0, 1920, 1080)
         quickbatall()
         back1()
     if dialy:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongGSDAZS\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongGSDAZS\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
 
 
 def huodong_CGBF(dialy, huodongshop):
     generalact.moveclick_1s(1672, 353)
-    # generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongCGBF\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    # generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongCGBF\\enter.bmp', 0.9, 0, 0, 1920, 1080)
     if huodongshop:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongCGBF\\22.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongCGBF\\22.bmp', 0.9, 0, 0, 1920, 1080)
         quickbatall()
         back1()
     if dialy:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongCGBF\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongCGBF\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
 
@@ -788,18 +788,18 @@ def huodong_CGBF(dialy, huodongshop):
 def huodong_TSML(dialy):
     generalact.moveclick_1s(1672, 353)
     if dialy:
-        generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongTSML\\daily.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongTSML\\daily.bmp', 0.9, 0, 0, 1920, 1080)
         huodongdailyget()
         back1()
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongTSML\\enter.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongTSML\\stage20.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongTSML\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongTSML\\stage20.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
 
 
 def huodong_231214():
     generalact.moveclick_1s(1672, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodong231214\\enter.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodong231214\\enter2.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodong231214\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodong231214\\enter2.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
     back1()
     generalact.moveclick_1s(1672, 421)
@@ -808,13 +808,13 @@ def huodong_231214():
 
 def huodong_231130():
     generalact.moveclick_1s(1672, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodong231130\\commondown.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodong231130\\commondown14_4.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodong231130\\commondown.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodong231130\\commondown14_4.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()
 
 
 def huodong_MOMO():
     generalact.moveclick_1s(1672, 353)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongMOMO\\wakeup.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('QNZL\\huodong\\huodongMOMO\\stage20.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongMOMO\\wakeup.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('QNZL\\huodong\\huodongMOMO\\stage20.bmp', 0.9, 0, 0, 1920, 1080)
     quickbatall()

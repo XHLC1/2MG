@@ -44,21 +44,21 @@ def mission():
 def shop():
     generalact.logger.info('wuqimituFun.shop')
     generalact.rangeclick01(5, 1445, 980)  # 危机管理
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop.bmp', 0.9, 0, 0, 1920, 1080)
     ###########################################################daily shop gift##########################################
-    generalact.imgcorrdinatefunde1('wuqimitu\\picture\\shop_jingxuan.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('wuqimitu\\picture\\shop_jingxuan_changgui.bmp', 0.8, 0, 0, 1920, 1080)
-    if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_jingxuan_daily.bmp',
+    generalact.ImgWhileDelay1Cdelay1('wuqimitu\\picture\\shop_jingxuan.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('wuqimitu\\picture\\shop_jingxuan_changgui.bmp', 0.8, 0, 0, 1920, 1080)
+    if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_jingxuan_daily.bmp',
                                               0.8, 0, 0, 1920, 1080):
         pass
     else:
         generalact.dragmouse_count(1840, 550, 550, 550, 5)
-        generalact.imgcorrdinatefunde1('wuqimitu\\picture\\shop_jingxuan_daily.bmp', 0.8, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('wuqimitu\\picture\\shop_jingxuan_daily.bmp', 0.8, 0, 0, 1920, 1080)
     shop_buy()
     ###########################################################daily shop gift##########################################
     if generalact.firstDayOfMonth3():
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin.bmp',
+            if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin.bmp',
                                                       0.8, 0, 0, 1920, 1080):
                 break
             generalact.dragmouse(195, 960, 195, 780)
@@ -68,9 +68,9 @@ def shop():
             shop_buy()
         # 兑换中心 战勋兑换
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_zhanxun.bmp',
+            if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_zhanxun.bmp',
                                                       0.9, 0, 0, 1920, 1080):
-                generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_zhanxun.bmp',
+                generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_zhanxun.bmp',
                                                        0.9, 0, 0, 1920, 1080)
                 break
             generalact.dragmouse(195, 960, 195, 780)
@@ -79,9 +79,9 @@ def shop():
         shop_buy()
         # 兑换中心 样本兑换
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_yangben.bmp',
+            if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_yangben.bmp',
                                                       0.9, 0, 0, 1920, 1080):
-                generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_yangben.bmp',
+                generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_yangben.bmp',
                                                        0.9, 0, 0, 1920, 1080)
                 break
             generalact.dragmouse(195, 960, 195, 780)
@@ -91,9 +91,9 @@ def shop():
             shop_buy()
         # 兑换中心 联盟兑换
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_lianmeng.bmp',
+            if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_lianmeng.bmp',
                                                       0.9, 0, 0, 1920, 1080):
-                generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_lianmeng.bmp',
+                generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_lianmeng.bmp',
                                                        0.9, 0, 0, 1920, 1080)
                 break
             generalact.dragmouse(195, 960, 195, 780)
@@ -117,9 +117,9 @@ def shop():
             shop_buy()
         # 兑换中心 友情兑换
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
+            if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
                                                       0.9, 0, 0, 1920, 1080):
-                generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
+                generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
                                                        0.9, 0, 0, 1920, 1080)
                 break
             generalact.dragmouse(195, 960, 195, 780)
@@ -130,15 +130,15 @@ def shop():
     if generalact.firstDayOfWeek():
         if not generalact.firstDayOfMonth3():
             while 1:
-                if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin.bmp',
+                if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin.bmp',
                                                           0.8, 0, 0, 1920, 1080):
                     break
                 generalact.dragmouse(195, 960, 195, 780)
                 time.sleep(1)
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
+            if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
                                                       0.9, 0, 0, 1920, 1080):
-                generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
+                generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
                                                        0.9, 0, 0, 1920, 1080)
                 break
             generalact.dragmouse(195, 960, 195, 780)
@@ -148,15 +148,15 @@ def shop():
             shop_buy()
     if not generalact.firstDayOfMonth3() and not generalact.firstDayOfWeek():
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin.bmp',
+            if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin.bmp',
                                                       0.8, 0, 0, 1920, 1080):
                 break
             generalact.dragmouse(195, 960, 195, 780)
             time.sleep(1)
     while 1:
-        if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
+        if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
                                                   0.9, 0, 0, 1920, 1080):
-            generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
+            generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_duihuanzhongxin_youqing.bmp',
                                                    0.9, 0, 0, 1920, 1080)
             break
         generalact.dragmouse(195, 960, 195, 780)
@@ -170,7 +170,7 @@ def shop():
 def shop_buy():
     generalact.rangeclick01(5, 1463, 735)
     generalact.rangeclick01(5, 1523, 737)
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\shop_buy.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\shop_buy.bmp', 0.9, 0, 0, 1920, 1080)
     clickblock()
     clickblock()
 
@@ -184,7 +184,7 @@ def disichen(AFTD, jiyifengbaoflag, resourceflag):
         generalact.rangeclick02(5, 1825, 580)
         generalact.rangeclick02(5, 1010, 680)  # 浊暗之井
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\zhuoanzhijin.bmp', 0.9, 0, 0, 1920, 1080):
+            if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\zhuoanzhijin.bmp', 0.9, 0, 0, 1920, 1080):
                 generalact.rangeclick01(4, 1800, 795)
                 break
             generalact.moveclick_2s(960, 940)
@@ -193,7 +193,7 @@ def disichen(AFTD, jiyifengbaoflag, resourceflag):
         if jiyifengbaoflag:
             ###########################################################jiyifengbao######################################
             enterdisichen(1)
-            generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\jisicheng_jiyifengbao.bmp', 0.9, 0, 0, 1920, 1080)
+            generalact.ImgFor3Cdelay1('wuqimitu\\picture\\jisicheng_jiyifengbao.bmp', 0.9, 0, 0, 1920, 1080)
             generalact.moveclick_1s(1575, 915)
             quickbat()
             backtomainui()
@@ -255,15 +255,15 @@ def disichen(AFTD, jiyifengbaoflag, resourceflag):
 
 def quickbat3():
     generalact.rangeclick01(4, 1620, 710)
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\quickbat.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\quickbat.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick02(4, 555, 717)
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\quickbat_start.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\quickbat_start.bmp', 0.9, 0, 0, 1920, 1080)
 
 
 def quickbat():
     generalact.rangeclick01(4, 1680, 710)
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\quickbat.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\quickbat_start.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\quickbat.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\quickbat_start.bmp', 0.9, 0, 0, 1920, 1080)
 
 
 # where 0 内海 1 绣河
@@ -281,16 +281,16 @@ def enterdisichen(where):
 def guild():
     generalact.logger.info('wuqimituFun.guild')
     generalact.rangeclick01(5, 1580, 1000)  # 整备中心
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\guild.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\guild.bmp', 0.9, 0, 0, 1920, 1080)
     clickblock()
     backtomainui()
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\guild.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('wuqimitu\\picture\\guild_donate.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\guild.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('wuqimitu\\picture\\guild_donate.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(5, 540, 900)
     clickblock()
     if generalact.firstDayOfWeek6():
         back1()
-        generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\guild_help.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgFor3Cdelay1('wuqimitu\\picture\\guild_help.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick01(15, 250, 1020)
     backtomainui()
 
@@ -298,7 +298,7 @@ def guild():
 def friends():
     generalact.logger.info('wuqimituFun.friends')
     generalact.rangeclick01(5, 1580, 1000)  # 整备中心
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\friends.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\friends.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1715, 950)
     clickblock()
     backtomainui()
@@ -307,7 +307,7 @@ def friends():
 def supervise(AFTD):
     generalact.logger.info('wuqimituFun.supervise')
     generalact.rangeclick01(5, 1580, 1000)  # 整备中心
-    generalact.imgcorrdinatefunde1('wuqimitu\\picture\\supervise.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('wuqimitu\\picture\\supervise.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick01(5, 295, 535)
     clickblock()
     if not AFTD:
@@ -322,15 +322,15 @@ def supervise(AFTD):
 def management(AFTD):
     generalact.logger.info('wuqimituFun.management')
     generalact.rangeclick01(5, 1445, 980)  # 危机管理
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\management.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\management.bmp', 0.9, 0, 0, 1920, 1080)
     if not AFTD:
         generalact.moveclick_1s(313, 512)
         generalact.rangeclick01(6, 1408, 535)
         generalact.rangeclick01(6, 1050, 920)
         generalact.rangeclick01(6, 1410, 825)
         clickblock()
-    generalact.imgcorrdinatefunde1('wuqimitu\\picture\\management_errand.bmp', 0.8, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('wuqimitu\\picture\\management_errand_get.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('wuqimitu\\picture\\management_errand.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('wuqimitu\\picture\\management_errand_get.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1670, 830)
     backtomainui()
 
@@ -352,7 +352,7 @@ def qingxuguanli(AFTD):
 
 def signin():
     generalact.logger.info('wuqimituFun.signin')
-    generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\signin.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('wuqimitu\\picture\\signin.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick02(4, 1374, 631)
     clickblock()
     backtomainui()
@@ -361,23 +361,23 @@ def signin():
 def entergamefun():
     generalact.logger.info('wuqimituFun.entergamefun')
     n = 0
-    generalact.imgcorrdinatefunenter('wuqimitu\\picture\\wuqimitu.bmp', 0.9, 42, 181, 1780, 1000, 0, -40)
+    generalact.ImgShiftWhileDelay1Cdelay1('wuqimitu\\picture\\wuqimitu.bmp', 0.9, 42, 181, 1780, 1000, 0, -40)
     time.sleep(10)
     while 1:
         time.sleep(1)
         n += 1
-        if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\login.bmp', 0.7, 0, 0, 1920, 1080):
+        if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\login.bmp', 0.7, 0, 0, 1920, 1080):
             generalact.moveclick_1s(818, 616)
             CSauto.typewrite('a1181266134', interval=0.1)
             generalact.rangeclick02(4, 1200, 777)
         generalact.moveclick_1s(62, 1061)
-        generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\entergame.bmp', 0.7, 0, 0, 1920, 1080)
+        generalact.ImgFor3Cdelay1('wuqimitu\\picture\\entergame.bmp', 0.7, 0, 0, 1920, 1080)
         generalact.rangeclick02(4, 1764, 120)
-        generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\sure.bmp', 0.7, 0, 0, 1920, 1080)
-        if generalact.imgcorrdinatefuncount3('wuqimitu\\picture\\XHL.bmp', 0.7, 0, 0, 1920, 1080):
+        generalact.ImgFor3Cdelay1('wuqimitu\\picture\\sure.bmp', 0.7, 0, 0, 1920, 1080)
+        if generalact.ImgReturn1For3('wuqimitu\\picture\\XHL.bmp', 0.7, 0, 0, 1920, 1080):
             generalact.rangeclick02(4, 1764, 120)
             time.sleep(1)
-            generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\sure.bmp', 0.7, 0, 0, 1920, 1080)
+            generalact.ImgFor3Cdelay1('wuqimitu\\picture\\sure.bmp', 0.7, 0, 0, 1920, 1080)
             generalact.rangeclick02(4, 1764, 120)
             break
         if n > 60:
@@ -388,9 +388,9 @@ def entergamefun():
 
 def backtomainui():
     while 1:
-        if generalact.imgcorrdinatefuncount('wuqimitu\\picture\\supervise.bmp', 0.9, 0, 0, 1920, 1080):
+        if generalact.ImgReturn1For5('wuqimitu\\picture\\supervise.bmp', 0.9, 0, 0, 1920, 1080):
             break
-        if generalact.imgcorrdinatefuncount('wuqimitu\\picture\\role.bmp', 0.9, 0, 0, 1920, 1080):
+        if generalact.ImgReturn1For5('wuqimitu\\picture\\role.bmp', 0.9, 0, 0, 1920, 1080):
             break
         back1()
 
@@ -420,7 +420,7 @@ def fortest():
     generalact.rangeclick02(5, 1825, 580)
     generalact.rangeclick02(5, 1010, 680)  # 浊暗之井
     while 1:
-        if generalact.imgcorrdinatefunclickcount3('wuqimitu\\picture\\zhuoanzhijin.bmp', 0.9, 0, 0, 1920, 1080):
+        if generalact.ImgFor3Cdelay1('wuqimitu\\picture\\zhuoanzhijin.bmp', 0.9, 0, 0, 1920, 1080):
             generalact.rangeclick01(4, 1800, 795)
             break
         generalact.moveclick_2s(960, 940)

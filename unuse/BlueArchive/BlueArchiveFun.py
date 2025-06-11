@@ -25,10 +25,10 @@ def dailytaskst(AFTD, huodongflag):
 def enterBlueArchiveFun():
     n = 0
     generalact.logger.info('BlueArchiveFun.enterBlueArchiveFun')
-    generalact.imgcorrdinatefunenter('BlueArchive\\BlueArchiveIco.bmp', 0.9, 0, 0, 1920, 1080, 0, -40)
-    generalact.imgcorrdinatefunwhile('BlueArchive\\Menu.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\BlueArchiveIco.bmp', 0.9, 0, 0, 1920, 1080, 0, -40)
+    generalact.ImgWhile('BlueArchive\\Menu.bmp', 0.9, 0, 0, 1920, 1080)
     while 1:
-        if generalact.imgcorrdinatefuncount3P('BlueArchive\\Menu.bmp', 0.9, 0, 0, 1920, 1080) == 1:
+        if generalact.ImgReturn1For3('BlueArchive\\Menu.bmp', 0.9, 0, 0, 1920, 1080) == 1:
             generalact.moveclick_1s(55, 71)
             break
         else:
@@ -37,28 +37,28 @@ def enterBlueArchiveFun():
             if n % 60 == 0:
                 generalact.MUMUclose1()
                 generalact.MUMUclose1()
-                generalact.imgcorrdinatefunenter('BlueArchive\\BlueArchiveIco.bmp', 0.9, 0, 0, 1920, 1080, 0, -40)
+                generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\BlueArchiveIco.bmp', 0.9, 0, 0, 1920, 1080, 0, -40)
     while 1:
-        if generalact.imgcorrdinatefuncount3('BlueArchive\\xingheluo.bmp', 0.9, 0, 0, 1920, 1080) == 1:
+        if generalact.ImgReturn1For3('BlueArchive\\xingheluo.bmp', 0.9, 0, 0, 1920, 1080) == 1:
             back3()
             break
         else:
             n += 1
-            generalact.imgcorrdinatefun3('BlueArchive\\update.bmp', 0.8, 0, 0, 1920, 1080)
+            generalact.ImgFor3Cdelay1('BlueArchive\\update.bmp', 0.8, 0, 0, 1920, 1080)
             back2()
             if n % 60 == 0:
                 generalact.MUMUclose1()
                 generalact.MUMUclose1()
-                generalact.imgcorrdinatefunenter('BlueArchive\\BlueArchiveIco.bmp', 0.9, 0, 0, 1920, 1080, 0, -40)
-                generalact.imgcorrdinatefunwhile('BlueArchive\\Menu.bmp', 0.9, 0, 0, 1920, 1080)
+                generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\BlueArchiveIco.bmp', 0.9, 0, 0, 1920, 1080, 0, -40)
+                generalact.ImgWhile('BlueArchive\\Menu.bmp', 0.9, 0, 0, 1920, 1080)
                 generalact.moveclick_1s(55, 71)
 
 
 def TeamAndShop():
     generalact.logger.info('BlueArchiveFun.TeamAndShop')
-    generalact.imgcorrdinatefunshiftde1('BlueArchive\\Team.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
+    generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\Team.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
     backtomainui()
-    generalact.imgcorrdinatefunshiftde1('BlueArchive\\shop.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
+    generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\shop.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
     x = 0
     time.sleep(1)
     generalact.moveclick_1s(1714, 760)
@@ -87,10 +87,10 @@ def TeamAndShop():
 
 def coffeeshop():
     generalact.logger.info('BlueArchiveFun.coffeeshop')
-    generalact.imgcorrdinatefunshiftde1('BlueArchive\\coffee.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
+    generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\coffee.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
     backtomainui()
-    generalact.imgcorrdinatefunshiftde1('BlueArchive\\coffee.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
-    generalact.imgcorrdinatefun('BlueArchive\\coffeecollect.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\coffee.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
+    generalact.ImgWhileCdelay1('BlueArchive\\coffeecollect.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_1s(999, 795)
     generalact.rangeclick02(5, 90, 90)
     backtomainui()
@@ -98,14 +98,14 @@ def coffeeshop():
 
 def queren():
     while 1:
-        if generalact.imgcorrdinatefun3('BlueArchive\\queren.bmp', 0.9, 0, 0, 1920, 1080):
+        if generalact.ImgFor3Cdelay1('BlueArchive\\queren.bmp', 0.9, 0, 0, 1920, 1080):
             break
         else:
             generalact.moveclick_1s(1379, 620)  # 开始扫荡
 
 
 def querensaodang():
-    generalact.imgcorrdinatefun3('BlueArchive\\saodangqueren.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgFor3Cdelay1('BlueArchive\\saodangqueren.bmp', 0.9, 0, 0, 1920, 1080)
 
 
 def saodangqueren():
@@ -136,23 +136,23 @@ def businessareaxuanshangtongji():
 
 
 def xuanshangtongji():
-    generalact.imgcorrdinatefunde1('BlueArchive\\xuanshangtongji.bmp', 0.9, 980, 600, 1220, 800)
+    generalact.ImgWhileDelay1Cdelay1('BlueArchive\\xuanshangtongji.bmp', 0.9, 980, 600, 1220, 800)
 
 
 def xuanshangtongjiwhile():
-    generalact.imgcorrdinatefunwhile('BlueArchive\\xuanshangtongji.bmp', 0.9, 994, 600, 1220, 800)
+    generalact.ImgWhile('BlueArchive\\xuanshangtongji.bmp', 0.9, 994, 600, 1220, 800)
 
 
 def xuanshangtongjiback():
-    generalact.imgcorrdinatefunmovenoclick('BlueArchive\\xuanshangtongji.bmp', 0.9, 980, 600, 1220, 800, 94, 92)
+    generalact.ImgReturn1For3_ConfirmA('BlueArchive\\xuanshangtongji.bmp', 0.9, 980, 600, 1220, 800, 94, 92)
 
 
 def skyway():
-    generalact.imgcorrdinatefun('BlueArchive\\skyway.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileCdelay1('BlueArchive\\skyway.bmp', 0.9, 0, 0, 1920, 1080)
 
 
 def skywaywhile():
-    generalact.imgcorrdinatefunwhile('BlueArchive\\skyway.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhile('BlueArchive\\skyway.bmp', 0.9, 0, 0, 1920, 1080)
 
 
 def xuanshangtongjirufchang():
@@ -262,8 +262,8 @@ def huodong(AFTD, huodongflag_sui3, huodongflag_shop):
             generalact.moveclick_1s(1145, 770)
             generalact.rangeclick01(10, 1578, 1011)
         if huodongflag_shop:
-            generalact.imgcorrdinatefunshiftde1('BlueArchive\\shop.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
-            generalact.imgcorrdinatefunde1('BlueArchive\\shop_zhanshu.bmp', 0.8, 0, 0, 1920, 1080)
+            generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\shop.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
+            generalact.ImgWhileDelay1Cdelay1('BlueArchive\\shop_zhanshu.bmp', 0.8, 0, 0, 1920, 1080)
             if huodongflag_shop == 4:
                 huodongflag_shopcount = 4
             for i in range(huodongflag_shopcount):
@@ -286,15 +286,15 @@ def huodong_TNL():
     generalact.moveclick_3s(1766, 872)  # 业务区
     xuanshangtongjiwhile()
     generalact.moveclick_2s(162, 275)
-    generalact.imgcorrdinatefunwhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1393, 207)
     generalact.movemouse(1400, 520)
     while 1:
-        # if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\TNL\\07.bmp',
+        # if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\TNL\\07.bmp',
         #                                                0.9, 850, 100, 1980, 1080, 450, 0):  # 6
-        # if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\library\\11.bmp',
+        # if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\library\\11.bmp',
         #                                                0.9, 850, 100, 1980, 1080, 450, 0):  # 6
-        if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\TNL\\09.bmp',
+        if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\TNL\\09.bmp',
                                                        0.9, 850, 100, 1980, 1080, 450, 0):  # 6
             break
         CSauto.scroll(-100)
@@ -306,17 +306,17 @@ def huodong_library():
     generalact.moveclick_3s(1766, 872)  # 业务区
     xuanshangtongjiwhile()
     generalact.moveclick_2s(162, 275)
-    generalact.imgcorrdinatefunwhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1393, 207)
     generalact.movemouse(1400, 520)
     while 1:
-        # if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\library\\09.bmp',
+        # if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\library\\09.bmp',
         #                                                0.8, 850, 100, 1980, 1080, 450, 0):  # 6
-        # if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\library\\10.bmp',
+        # if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\library\\10.bmp',
         #                                                0.8, 850, 100, 1980, 1080, 420, 0):  # 8
-        # if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\library\\11.bmp',
+        # if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\library\\11.bmp',
         #                                                0.9, 850, 100, 1980, 1080, 450, 0):  # 6
-        if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\library\\12.bmp',
+        if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\library\\12.bmp',
                                                        0.9, 850, 100, 1980, 1080, 420, 0):  # 8
             break
         CSauto.scroll(-100)
@@ -328,13 +328,13 @@ def huodong_214():
     generalact.moveclick_3s(1766, 872)  # 业务区
     xuanshangtongjiwhile()
     generalact.moveclick_2s(162, 275)
-    generalact.imgcorrdinatefunwhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1393, 207)
     generalact.movemouse(1400, 520)
     while 1:
-        # if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\214\\10.bmp',
+        # if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\214\\10.bmp',
         #                                                0.8, 850, 100, 1980, 1080, 420, 0):
-        if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\214\\11.bmp',
+        if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\214\\11.bmp',
                                                        0.8, 850, 100, 1980, 1080, 450, 0):
             break
         CSauto.scroll(-100)
@@ -346,13 +346,13 @@ def huodong_newyear():
     generalact.moveclick_3s(1766, 872)  # 业务区
     xuanshangtongjiwhile()
     generalact.moveclick_2s(162, 275)
-    generalact.imgcorrdinatefunwhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1393, 207)
     generalact.movemouse(1400, 520)
     while 1:
-        # if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\newyear\\12.bmp',
+        # if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\newyear\\12.bmp',
         #                                                0.8, 850, 100, 1980, 1080, 450, 0):
-        if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\newyear\\12.bmp',
+        if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\newyear\\12.bmp',
                                                        0.8, 850, 100, 1980, 1080, 450, 0):
             break
         CSauto.scroll(-100)
@@ -362,11 +362,11 @@ def huodong_newyear():
 
 def huodong_227():
     generalact.moveclick_2s(1775, 350)
-    generalact.imgcorrdinatefunwhile('BlueArchive\\huodong\\227\\jiangli.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('BlueArchive\\huodong\\227\\jiangli.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1400, 205)  # 任务
     generalact.movemouse(1400, 520)
     while 1:
-        if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\227\\12.bmp',
+        if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\227\\12.bmp',
                                                        0.8, 850, 100, 1980, 1080, 450, 0):
             break
         CSauto.scroll(-100)
@@ -378,11 +378,11 @@ def huodong_yongzhuang2():
     generalact.moveclick_3s(1766, 872)  # 业务区
     xuanshangtongjiwhile()
     generalact.moveclick_2s(162, 275)
-    generalact.imgcorrdinatefunwhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
+    generalact.ImgWhile('BlueArchive\\huodong\\yongzhuang2\\wanfazhiyin.bmp', 0.8, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1393, 207)
     generalact.movemouse(1400, 520)
     while 1:
-        if generalact.imgcorrdinatefunshiftclickcount3('BlueArchive\\huodong\\yongzhuang2\\10.bmp',
+        if generalact.ImgShiftFor3Cdelay1('BlueArchive\\huodong\\yongzhuang2\\10.bmp',
                                                        0.8, 850, 100, 1980, 1080, 450, 0):
             break
         CSauto.scroll(-100)
@@ -407,9 +407,9 @@ def renwusaodang3():
 
 def manufacture():
     generalact.logger.info('BlueArchiveFun.manufacture')
-    generalact.imgcorrdinatefunshiftde1('BlueArchive\\manufacture.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
+    generalact.ImgShiftWhileDelay1Cdelay1('BlueArchive\\manufacture.bmp', 0.8, 0, 900, 1920, 1080, 0, -30)
     for i in range(4):
-        generalact.imgcorrdinatefun3('BlueArchive\\manufacture_get.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgFor3Cdelay1('BlueArchive\\manufacture_get.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.rangeclick02(4, 800, 1050)
     generalact.moveclick_3s(1440, 440)
     generalact.moveclick_1s(1350, 350)
@@ -431,7 +431,7 @@ def manufacture_make():
     giftflag = 0
     highitemflag = 0
     while 1:
-        if generalact.imgcorrdinatefuncount('BlueArchive\\manufacture_see.bmp', 0.9, 0, 0, 1920, 1080) == 1:
+        if generalact.ImgReturn1For5('BlueArchive\\manufacture_see.bmp', 0.9, 0, 0, 1920, 1080) == 1:
             break
         else:
             generalact.moveclick_02s(1240, 440)
@@ -447,18 +447,18 @@ def manufacture_make():
         if i == 4:
             man0x, man0y = man5x, man5y
         generalact.moveclick_05s(man0x, man0y)
-        if generalact.imgcorrdinatefuncount('BlueArchive\\manufacture_Vhighitem.bmp', 0.8, 0, 0, 1920, 1080) == 1:
+        if generalact.ImgReturn1For5('BlueArchive\\manufacture_Vhighitem.bmp', 0.8, 0, 0, 1920, 1080) == 1:
             Vhighitemflag = 1
             Vhighitemx, Vhighitemy = man0x, man0y
         else:
             Vhighitemflag = 0
-        if generalact.imgcorrdinatefuncount('BlueArchive\\manufacture_gift.bmp', 0.8, 0, 0, 1920, 1080) == 1:
+        if generalact.ImgReturn1For5('BlueArchive\\manufacture_gift.bmp', 0.8, 0, 0, 1920, 1080) == 1:
             giftflag = 1
             giftx, gifty = man0x, man0y
         else:
             # giftflag = 0
             pass
-        if generalact.imgcorrdinatefuncount('BlueArchive\\manufacture_highitem.bmp', 0.8, 0, 0, 1920, 1080) == 1:
+        if generalact.ImgReturn1For5('BlueArchive\\manufacture_highitem.bmp', 0.8, 0, 0, 1920, 1080) == 1:
             highitemflag = 1
             highitemx, highitemy = man0x, man0y
         else:
@@ -481,13 +481,13 @@ def manufacture_make():
     else:
         generalact.moveclick_05s(manx, many)
     generalact.moveclick_1s(1630, 990)
-    generalact.imgcorrdinatefunde1('BlueArchive\\manufacture_make.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('BlueArchive\\manufacture_man.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('BlueArchive\\manufacture_make.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('BlueArchive\\manufacture_man.bmp', 0.9, 0, 0, 1920, 1080)
 
 
 def backtomainui():
     while 1:
-        if generalact.imgcorrdinatefuncount('BlueArchive\\xingheluo.bmp', 0.9, 0, 0, 1920, 1080) == 1:
+        if generalact.ImgReturn1For5('BlueArchive\\xingheluo.bmp', 0.9, 0, 0, 1920, 1080) == 1:
             back3()
             break
         else:

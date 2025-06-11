@@ -66,31 +66,18 @@ def logger_config(log_path, logging_name):
 logger = logger_config(log_path='log.txt', logging_name='LOG')
 
 
-def imgcorrdinatefunenterreturn(imgname, confidence, x1, y1, x2, y2):
+def ImgWhile(imgname, confidence, x1, y1, x2, y2):
     logger.info(imgname)
-    a = 1
-    while a:
+    while 1:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
         if imgcoordinate is not None:
-            return 1, imgcoordinate
-        a += 1
-        if a == 6:
-            return 0, imgcoordinate
+            time.sleep(1)
+            break
+        else:
+            time.sleep(1)
 
 
-def imgcorrdinatefunenterreturnP(imgname, confidence, x1, y1, x2, y2):
-    print(imgname)
-    a = 1
-    while a:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            return 1, imgcoordinate
-        a += 1
-        if a == 6:
-            return 0, imgcoordinate
-
-
-def imgcorrdinatefun(imgname, confidence, x1, y1, x2, y2):
+def ImgWhileCdelay1(imgname, confidence, x1, y1, x2, y2):
     logger.info(imgname)
     while 1:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
@@ -100,7 +87,7 @@ def imgcorrdinatefun(imgname, confidence, x1, y1, x2, y2):
             break
 
 
-def imgcorrdinatefun2(imgname, confidence, x1, y1, x2, y2):
+def ImgWhileCdelay2(imgname, confidence, x1, y1, x2, y2):
     logger.info(imgname)
     while 1:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
@@ -110,7 +97,7 @@ def imgcorrdinatefun2(imgname, confidence, x1, y1, x2, y2):
             break
 
 
-def imgcorrdinatefunde1(imgname, confidence, x1, y1, x2, y2):
+def ImgWhileDelay1Cdelay1(imgname, confidence, x1, y1, x2, y2):
     logger.info(imgname)
     while 1:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
@@ -121,7 +108,7 @@ def imgcorrdinatefunde1(imgname, confidence, x1, y1, x2, y2):
             break
 
 
-def imgcorrdinatefunde2(imgname, confidence, x1, y1, x2, y2):
+def ImgWhileDelay2Cdelay1(imgname, confidence, x1, y1, x2, y2):
     logger.info(imgname)
     while 1:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
@@ -132,7 +119,7 @@ def imgcorrdinatefunde2(imgname, confidence, x1, y1, x2, y2):
             break
 
 
-def imgcorrdinatefunde1b2(imgname, confidence, x1, y1, x2, y2):
+def ImgWhileDelay1Cdelay2(imgname, confidence, x1, y1, x2, y2):
     logger.info(imgname)
     while 1:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
@@ -141,9 +128,9 @@ def imgcorrdinatefunde1b2(imgname, confidence, x1, y1, x2, y2):
             CSauto.click(imgcoordinate)
             time.sleep(2)
             break
+            
 
-
-def imgcorrdinatefunshiftde1(imgname, confidence, x1, y1, x2, y2, xshift, yshift):
+def ImgShiftWhileDelay1Cdelay1(imgname, confidence, x1, y1, x2, y2, xshift, yshift):
     logger.info(imgname)
     while 1:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
@@ -153,9 +140,24 @@ def imgcorrdinatefunshiftde1(imgname, confidence, x1, y1, x2, y2, xshift, yshift
             moveclick_1s(x + xshift, y + yshift)
             time.sleep(1)
             break
+        else:
+            time.sleep(1)
 
 
-def imgcorrdinatefun3(imgname, confidence, x1, y1, x2, y2):
+def ImgShiftFor3Cdelay1(imgname, confidence, x1, y1, x2, y2, xshift, yshift):
+    logger.info(imgname)
+    for i in range(3):
+        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
+        if imgcoordinate is not None:
+            x, y = imgcoordinate
+            moveclick_1s(x + xshift, y + yshift)
+            time.sleep(1)
+            break
+        else:
+            time.sleep(1)
+    
+
+def ImgFor3Cdelay1(imgname, confidence, x1, y1, x2, y2):
     logger.info(imgname)
     for i in range(3):
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
@@ -163,195 +165,101 @@ def imgcorrdinatefun3(imgname, confidence, x1, y1, x2, y2):
             CSauto.click(imgcoordinate)
             time.sleep(1)
             return 1
-    return 0
-
-
-def imgcorrdinatefun3P(imgname, confidence, x1, y1, x2, y2):
-    logger.info(imgname)
-    for i in range(3):
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            CSauto.click(imgcoordinate)
-            time.sleep(1)
-            return 1
-    return 0
-
-
-def imgcorrdinatefunclickcount3(imgname, confidence, x1, y1, x2, y2):
-    logger.info(imgname)
-    count = 0
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            CSauto.click(imgcoordinate)
-            time.sleep(1)
-            return 1
         else:
-            count += 1
-            if count == 3:
-                break
+            time.sleep(1)
     return 0
 
 
-def confirm_cilck3(imgstr, x, y):
+def ImgFor3Cdelay1_Confirm(imgstr, x, y):
     while 1:
-        if imgcorrdinatefunclickcount3(imgstr, 0.9, 0, 0, 1920, 1080):
+        if ImgFor3Cdelay1(imgstr, 0.9, 0, 0, 1920, 1080):
             time.sleep(1)
             break
         else:
             moveclick_1s(x, y)
 
 
-def imgcorrdinatefunshiftclickcount3(imgname, confidence, x1, y1, x2, y2, shiftx, shifty):
+def ImgReturn2For6(imgname, confidence, x1, y1, x2, y2):
     logger.info(imgname)
-    count = 0
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            x, y = imgcoordinate.x+shiftx, imgcoordinate.y+shifty
-            CSauto.click(x, y)
-            time.sleep(1)
-            return 1
-        else:
-            count += 1
-            if count == 3:
-                break
-    return 0
-
-
-def imgcorrdinatefunshiftclickcount3P(imgname, confidence, x1, y1, x2, y2, shiftx, shifty):
-    count = 0
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            x, y = imgcoordinate.x+shiftx, imgcoordinate.y+shifty
-            CSauto.click(x, y)
-            time.sleep(1)
-            return 1
-        else:
-            count += 1
-            if count == 3:
-                break
-    return 0
-
-
-def imgcorrdinatefuncount1(imgname, confidence, x1, y1, x2, y2):
-    logger.info(imgname)
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            return 1
-        else:
-            break
-    return 0
-
-
-def imgcorrdinatefuncount3(imgname, confidence, x1, y1, x2, y2):
-    logger.info(imgname)
-    count = 0
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            return 1
-        else:
-            count += 1
-            if count == 3:
-                break
-    return 0
-
-
-def confirm_nocilck3(imgstr, x, y):
-    while 1:
-        if imgcorrdinatefuncount3(imgstr, 0.9, 0, 0, 1920, 1080):
-            time.sleep(1)
-            break
-        else:
-            moveclick_1s(x, y)
-
-
-def imgcorrdinatefuncount3P(imgname, confidence, x1, y1, x2, y2):
-    print(imgname)
-    count = 0
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            return 1
-        else:
-            count += 1
-            if count == 3:
-                break
-    return 0
-
-
-def imgcorrdinatefuncount(imgname, confidence, x1, y1, x2, y2):
-    logger.info(imgname)
-    count = 0
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            return 1
-        else:
-            count += 1
-            if count == 10:
-                break
-    return 0
-
-
-def imgcorrdinatefuncountreturn(imgname, confidence, x1, y1, x2, y2):
-    logger.info(imgname)
-    count = 0
-    while 1:
+    a = 1
+    while a:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
         if imgcoordinate is not None:
             return 1, imgcoordinate
+        a += 1
+        if a == 6:
+            return 0, imgcoordinate
+        
+
+def ImgReturn1For1(imgname, confidence, x1, y1, x2, y2):
+    logger.info(imgname)
+    while 1:
+        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
+        if imgcoordinate is not None:
+            time.sleep(1)
+            return 1
+        else:
+            break
+    return 0
+
+
+def ImgReturn1For3(imgname, confidence, x1, y1, x2, y2):
+    logger.info(imgname)
+    count = 0
+    while 1:
+        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
+        if imgcoordinate is not None:
+            time.sleep(1)
+            return 1
         else:
             count += 1
-            if count == 10:
+            if count == 3:
+                break
+            time.sleep(0.5)
+    return 0
+
+
+def ImgReturn1For5(imgname, confidence, x1, y1, x2, y2):
+    logger.info(imgname)
+    count = 0
+    while 1:
+        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
+        if imgcoordinate is not None:
+            time.sleep(1)
+            return 1
+        else:
+            count += 1
+            if count == 5:
+                break
+            time.sleep(0.5)
+    return 0
+
+
+def ImgReturn2For5(imgname, confidence, x1, y1, x2, y2):
+    logger.info(imgname)
+    count = 0
+    while 1:
+        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
+        if imgcoordinate is not None:
+            time.sleep(1)
+            return 1, imgcoordinate
+        else:
+            count += 1
+            if count == 5:
                 break
     return 0, imgcoordinate
 
 
-def imgcorrdinatefunshift(imgname, confidence, x1, y1, x2, y2, xshift, yshift):
-    logger.info(imgname)
-    a = 1
-    imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-    if imgcoordinate is not None:
-        x, y = imgcoordinate
-        moveclick_1s(x + xshift, y + yshift)
-        time.sleep(1)
-        return a
-
-
-def imgcorrdinatefunwhile(imgname, confidence, x1, y1, x2, y2):
-    logger.info(imgname)
+def ImgReturn1For3_Confirm(imgstr, x, y):
+    logger.info(imgstr)
     while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            time.sleep(1)
-            return 0
-
-
-def imgcorrdinatefunwhilenotime(imgname, confidence, x1, y1, x2, y2):
-    logger.info(imgname)
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            break
-
-
-def imgcorrdinatefunmoveclick(imgname, confidence, x1, y1, x2, y2, x, y):
-    logger.info(imgname)
-    while 1:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            time.sleep(1)
-            # CSauto.click(imgcoordinate)
+        if ImgReturn1For3(imgstr, 0.9, 0, 0, 1920, 1080):
             break
         else:
             moveclick_1s(x, y)
 
 
-def imgcorrdinatefunmovenoclick(imgname, confidence, x1, y1, x2, y2, x, y):
+def ImgReturn1For3_ConfirmA(imgname, confidence, x1, y1, x2, y2, x, y):
     logger.info(imgname)
     while 1:
         imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
@@ -360,28 +268,6 @@ def imgcorrdinatefunmovenoclick(imgname, confidence, x1, y1, x2, y2, x, y):
             break
         else:
             moveclick_1s(x, y)
-
-
-def imgcorrdinatefunenter(imgname, confidence, x1, y1, x2, y2, xp, yp):
-    logger.info(imgname)
-    a = 1
-    while a:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            CSauto.click(imgcoordinate.x + xp, imgcoordinate.y + yp)
-            time.sleep(1)
-            a = 0
-
-
-def imgcorrdinatefunenterP(imgname, confidence, x1, y1, x2, y2, xp, yp):
-    print(imgname)
-    a = 1
-    while a:
-        imgcoordinate = CSauto.locateCenterOnScreen(imgname, confidence=confidence, region=(x1, y1, x2, y2))
-        if imgcoordinate is not None:
-            CSauto.click(imgcoordinate.x + xp, imgcoordinate.y + yp)
-            time.sleep(1)
-            a = 0
 
 
 def fixedtime(settime1, flag):
@@ -871,7 +757,7 @@ def startupMUMU(sleeptime):
     # generalact.moveclick_1s(1895, 8)
     start_exe(MUMUpath)
     time.sleep(sleeptime)
-    imgcorrdinatefun3('MUMU\\close.bmp', 0.8, 1300, 100, 1920, 1080)
+    ImgFor3Cdelay1('MUMU\\close.bmp', 0.8, 1300, 100, 1920, 1080)
     for i in range(2):
         dragmouse(1770, 600, 200, 600)
     rangeclick01(4, 1845, 65)

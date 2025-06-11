@@ -37,7 +37,7 @@ def entergalacticrealmfun():
     #         n += 1
     #         print(n)
     #         if n % 60 == 0:
-    #             # generalact.imgcorrdinatefunshiftclickcount3('Galactic_realm\\GalacticRealm.bmp',
+    #             # generalact.ImgShiftFor3Cdelay1('Galactic_realm\\GalacticRealm.bmp',
     #             #                                             0.8, 42, 181, 1780, 1000, 0, -40)
     #             generalact.MUMUclose1()
     #             generalact.MUMUclose1()
@@ -53,9 +53,9 @@ def entergalacticrealmfun():
 
 
 def galacticrealmicon():
-    generalact.imgcorrdinatefunenter('Galactic_realm\\GalacticRealm.bmp', 0.8, 42, 181, 1780, 1000, 0, -40)
+    generalact.ImgShiftWhileDelay1Cdelay1('Galactic_realm\\GalacticRealm.bmp', 0.8, 42, 181, 1780, 1000, 0, -40)
     time.sleep(3)
-    if generalact.imgcorrdinatefuncount3('RE1999\\download.bmp', 0.9, 0, 0, 1920, 1080):
+    if generalact.ImgReturn1For3('RE1999\\download.bmp', 0.9, 0, 0, 1920, 1080):
         generalact.moveclick_1s(960, 746)
 
 
@@ -76,8 +76,8 @@ def levelup():
 def shipaffairs():
     generalact.logger.info('GalacticRealmFun.shipaffairs')
     generalact.moveclick_1s(1361, 317)  # 舰务
-    generalact.imgcorrdinatefunde1('Galactic_realm\\ship_eco.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('Galactic_realm\\ship_eco1.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_eco.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhile('Galactic_realm\\ship_eco1.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick02(4, 1810, 1020)
     if generalact.firstDayOfWeek():
         # ship_eco(400, 430)
@@ -95,7 +95,7 @@ def shipaffairs():
     if generalact.firstDayOfWeek7():
         ship_eco(175, 430)  # 玉米
     back2()
-    generalact.imgcorrdinatefunde1('Galactic_realm\\ship_proving.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_proving.bmp', 0.9, 0, 0, 1920, 1080)
     time.sleep(2)
     generalact.moveclick_1s(965, 987)
     generalact.moveclick_1s(1600, 1035)
@@ -111,30 +111,30 @@ def shipaffairs():
 
 
 def shipcomcenter():
-    generalact.imgcorrdinatefunde1('Galactic_realm\\ship_comcenter.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1b2('Galactic_realm\\ship_comcenter1.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_comcenter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay2('Galactic_realm\\ship_comcenter1.bmp', 0.9, 0, 0, 1920, 1080)
     while 1:
         time.sleep(3)
-        if generalact.imgcorrdinatefuncount3('Galactic_realm\\ship_comcenter_0.bmp',
+        if generalact.ImgReturn1For3('Galactic_realm\\ship_comcenter_0.bmp',
                                              0.95, 1500, 40, 1920, 1080):
             break
-        if generalact.imgcorrdinatefunshiftclickcount3('Galactic_realm\\ship_comcenter_3.bmp',
+        if generalact.ImgShiftFor3Cdelay1('Galactic_realm\\ship_comcenter_3.bmp',
                                                        0.95, 980, 1000, 1920, 1080, 0, -100):
-            generalact.imgcorrdinatefunde1('Galactic_realm\\ship_comcenterfinish.bmp', 0.9, 0, 0, 1920, 1080)
-            generalact.imgcorrdinatefunwhile('Galactic_realm\\ship_comcenter_get.bmp', 0.9, 0, 0, 1920, 1080)
+            generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_comcenterfinish.bmp', 0.9, 0, 0, 1920, 1080)
+            generalact.ImgWhile('Galactic_realm\\ship_comcenter_get.bmp', 0.9, 0, 0, 1920, 1080)
             generalact.moveclick_05s(986, 938)
             generalact.dragmouse(986, 938, 1091, 247)
-            generalact.imgcorrdinatefunde1('Galactic_realm\\skip.bmp', 0.9, 0, 0, 1920, 1080)
+            generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\skip.bmp', 0.9, 0, 0, 1920, 1080)
             continue
-        if generalact.imgcorrdinatefunshiftclickcount3('Galactic_realm\\ship_comcenter_4.bmp',
+        if generalact.ImgShiftFor3Cdelay1('Galactic_realm\\ship_comcenter_4.bmp',
                                                        0.9, 980, 1000, 1920, 1080, 0, -100):
             generalact.moveclick_05s(1456, 578)
             generalact.moveclick_05s(1069, 912)
-            generalact.imgcorrdinatefunde1('Galactic_realm\\ship_comcenterfinish.bmp', 0.9, 0, 0, 1920, 1080)
-            generalact.imgcorrdinatefunwhile('Galactic_realm\\ship_comcenter_get.bmp', 0.9, 0, 0, 1920, 1080)
+            generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_comcenterfinish.bmp', 0.9, 0, 0, 1920, 1080)
+            generalact.ImgWhile('Galactic_realm\\ship_comcenter_get.bmp', 0.9, 0, 0, 1920, 1080)
             generalact.rangeclick01(5, 1009, 927)
             generalact.dragmouse(986, 938, 1091, 247)
-            generalact.imgcorrdinatefunde1('Galactic_realm\\skip.bmp', 0.9, 0, 0, 1920, 1080)
+            generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\skip.bmp', 0.9, 0, 0, 1920, 1080)
         else:
             break
     back2()
@@ -144,14 +144,14 @@ def shipcomcenter():
 def shipaffairsN():
     generalact.logger.info('GalacticRealmFun.shipaffairsN')
     generalact.moveclick_1s(1361, 317)  # 舰务
-    generalact.imgcorrdinatefunde1('Galactic_realm\\ship_eco.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunwhile('Galactic_realm\\ship_eco1.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_eco.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhile('Galactic_realm\\ship_eco1.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick02(4, 1810, 1020)
     if generalact.firstDayOfWeek7():
         ship_eco(400, 430)
     back2()
     shipcomcenter()
-    generalact.imgcorrdinatefunde1('Galactic_realm\\ship_proving.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_proving.bmp', 0.9, 0, 0, 1920, 1080)
     time.sleep(2)
     generalact.moveclick_1s(965, 987)
     generalact.moveclick_1s(1600, 1035)
@@ -170,8 +170,8 @@ def ship_dinner(AFTD):
     if generalact.firstDayOfWeek5() and AFTD:
         generalact.logger.info('GalacticRealmFun.ship_dinner')
         generalact.moveclick_1s(1361, 317)  # 舰务
-        generalact.imgcorrdinatefunde1('Galactic_realm\\ship_dinner.bmp', 0.9, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\ship_dinner_cook.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_dinner.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\ship_dinner_cook.bmp', 0.9, 0, 0, 1920, 1080)
         # generalact.movemouse(770, 287)
         for i in range(6):
             generalact.dragmouse(775, 1000, 775, 200)
@@ -207,7 +207,7 @@ def ship_eco(x, y):
 def mission():
     generalact.logger.info('GalacticRealmFun.mission')
     generalact.moveclick_05s(1469, 983)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\mission_get.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\mission_get.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick01(10, 1600, 980)
     generalact.moveclick_05s(160, 433)
     generalact.rangeclick01(10, 1600, 980)
@@ -220,11 +220,11 @@ def shopFM():
     if generalact.firstDayOfMonth3():
         generalact.logger.info('GalacticRealmFun.shopFM')
         generalact.moveclick_1s(1350, 700)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\tehuilibao.bmp', 0.9, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\tehuilibao_jichubugeibao.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\tehuilibao.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\tehuilibao_jichubugeibao.bmp', 0.9, 0, 0, 1920, 1080)
         shopbuy()
-        generalact.imgcorrdinatefunde1('Galactic_realm\\supplystore.bmp', 0.9, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\supplystore_exchange.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\supplystore.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\supplystore_exchange.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_05s(1270, 945)
         clickblock()
         shopbuymove(586, 386, 6)  # 1L1R
@@ -239,7 +239,7 @@ def TacticalModule():
     if generalact.firstDayOfMonth():
         generalact.logger.info('GalacticRealmFun.TacticalModule')
         generalact.moveclick_1s(1790, 995)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\storage_module.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\storage_module.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_1s(1700, 1000)  # discard
         for i in range(4):
             generalact.moveclick_1s(885, 223)  # quick choice
@@ -275,19 +275,19 @@ def clickblock():
 def huodongshop():
     while 1:
         generalact.moveclick_05s(1731, 511)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\shop_max.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\shop_max.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_05s(1321, 899)
         generalact.rangeclick01(6, 1126, 1040)
 
 
 def batagain():
-    generalact.imgcorrdinatefunwhile('Galactic_realm\\bat_again.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhile('Galactic_realm\\bat_again.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.rangeclick01(5, 1226, 659)
 
 
 def autobat():
-    generalact.imgcorrdinatefunde1('Galactic_realm\\bat_autobatH.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\bat_batstartH.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\bat_autobatH.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\bat_batstartH.bmp', 0.9, 0, 0, 1920, 1080)
 
 
 def huodong(huodongflag, resourceflag):
@@ -295,7 +295,7 @@ def huodong(huodongflag, resourceflag):
         huodong1_6()
     else:
         generalact.moveclick_1s(1654, 505)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\houqing.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\houqing.bmp', 0.9, 0, 0, 1920, 1080)
         if resourceflag == 0:  # money
             generalact.moveclick_1s(403, 602)
             generalact.moveclick_1s(1264, 544)
@@ -316,30 +316,30 @@ def huodong(huodongflag, resourceflag):
 
 def xinghaixunyou():
     while 1:
-        generalact.imgcorrdinatefunwhile('Galactic_realm\\xinghaixunyou\\XHXY_notes.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhile('Galactic_realm\\xinghaixunyou\\XHXY_notes.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_1s(1540, 860)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\xinghaixunyou\\XHXY_skip.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_skip.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_1s(1150, 720)
-        generalact.imgcorrdinatefunwhile('Galactic_realm\\xinghaixunyou\\XHXY_confirm.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhile('Galactic_realm\\xinghaixunyou\\XHXY_confirm.bmp', 0.9, 0, 0, 1920, 1080)
         for i in range(4):
-            if generalact.imgcorrdinatefunclickcount3('Galactic_realm\\xinghaixunyou\\XHXY_30.bmp',
+            if generalact.ImgFor3Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_30.bmp',
                                                       0.9, 0, 0, 1920, 1080):
                 pass
             else:
                 generalact.moveclick_05s(645, 600)
             generalact.moveclick_05s(960, 970)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\xinghaixunyou\\XHXY_confirm1.bmp', 0.9, 0, 0, 1920, 1080)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\xinghaixunyou\\XHXY_yellow.bmp', 0.8, 0, 0, 800, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_confirm1.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_yellow.bmp', 0.8, 0, 0, 800, 1080)
         generalact.moveclick_05s(1570, 700)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\xinghaixunyou\\XHXY_Deploymentactions.bmp', 0.9, 0, 0, 1920,
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_Deploymentactions.bmp', 0.9, 0, 0, 1920,
                                        1080)
         generalact.moveclick_05s(1200, 770)
-        generalact.imgcorrdinatefunde1('Galactic_realm\\xinghaixunyou\\XHXY_batstart.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_batstart.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_05s(1200, 770)
-        generalact.imgcorrdinatefunwhile('Galactic_realm\\xinghaixunyou\\BAT_skip.bmp', 0.9, 0, 0, 1920, 1080)
+        generalact.ImgWhile('Galactic_realm\\xinghaixunyou\\BAT_skip.bmp', 0.9, 0, 0, 1920, 1080)
         generalact.moveclick_1s(1525, 115)
         while 1:
-            if generalact.imgcorrdinatefunclickcount3('Galactic_realm\\xinghaixunyou\\XHXY_continue.bmp',
+            if generalact.ImgFor3Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_continue.bmp',
                                                       0.8, 0, 0, 1920, 1080):
                 generalact.moveclick_05s(430, 600)
                 generalact.moveclick_05s(660, 400)
@@ -348,12 +348,12 @@ def xinghaixunyou():
                 generalact.moveclick_05s(1600, 585)
                 generalact.moveclick_1s(1200, 770)
                 break
-            if generalact.imgcorrdinatefunclickcount3('Galactic_realm\\xinghaixunyou\\XHXY_fail.bmp',
+            if generalact.ImgFor3Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_fail.bmp',
                                                       0.8, 0, 0, 1920, 1080):
                 generalact.moveclick_05s(777, 766)
                 break
-        generalact.imgcorrdinatefunwhile('Galactic_realm\\xinghaixunyou\\XHXY_chuzhan.bmp', 0.9, 0, 0, 1920, 1080)
-        if generalact.imgcorrdinatefunclickcount3('Galactic_realm\\xinghaixunyou\\XHXY_shop.bmp',
+        generalact.ImgWhile('Galactic_realm\\xinghaixunyou\\XHXY_chuzhan.bmp', 0.9, 0, 0, 1920, 1080)
+        if generalact.ImgFor3Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_shop.bmp',
                                                   0.9, 0, 0, 1920, 1080):
             generalact.moveclick_1s(1440, 680)
             generalact.moveclick_1s(1700, 835)
@@ -365,7 +365,7 @@ def xinghaixunyou():
 
 
 def xinghaixunyou_map():
-    if generalact.imgcorrdinatefunclickcount3('Galactic_realm\\xinghaixunyou\\XHXY_zhongcheng.bmp',
+    if generalact.ImgFor3Cdelay1('Galactic_realm\\xinghaixunyou\\XHXY_zhongcheng.bmp',
                                               0.9, 0, 0, 1920, 1080):
         generalact.moveclick_1s(1440, 701)
         generalact.moveclick_1s(434, 1000)
@@ -382,7 +382,7 @@ def fish(counter):
 
 def backtomainui():
     while 1:
-        if generalact.imgcorrdinatefuncount('Galactic_realm\\ID.bmp', 0.9, 1100, 83, 1878, 984) == 1:
+        if generalact.ImgReturn1For5('Galactic_realm\\ID.bmp', 0.9, 1100, 83, 1878, 984) == 1:
             back3()
             break
         else:
@@ -403,10 +403,10 @@ def back3():  # 返回
 
 
 def huodong1_6():
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.6\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.6\\enter.bmp', 0.9, 0, 0, 1920, 1080)
     time.sleep(3)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.6\\map.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.6\\money.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.6\\map.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.6\\money.bmp', 0.9, 0, 0, 1920, 1080)
     # generalact.moveclick_1s(1241, 532)
     autobat()
     batagain()
@@ -415,10 +415,10 @@ def huodong1_6():
 
 
 def huodong1_5_1():
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.5.1\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.5.1\\enter.bmp', 0.9, 0, 0, 1920, 1080)
     time.sleep(3)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.5.1\\map.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.5.1\\exp.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.5.1\\map.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.5.1\\exp.bmp', 0.9, 0, 0, 1920, 1080)
     # generalact.moveclick_1s(1241, 532)
     autobat()
     batagain()
@@ -427,9 +427,9 @@ def huodong1_5_1():
 
 
 def huodong1_5():
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.5\\enter.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.5\\zhanbei.bmp', 0.9, 0, 0, 1920, 1080)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.5\\fangshou.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.5\\enter.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.5\\zhanbei.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.5\\fangshou.bmp', 0.9, 0, 0, 1920, 1080)
     # generalact.moveclick_1s(1241, 532)
     autobat()
     batagain()
@@ -439,7 +439,7 @@ def huodong1_5():
 
 def huodong1_4():
     generalact.moveclick_1s(151, 737)
-    generalact.imgcorrdinatefunde1('Galactic_realm\\huodong\\ver1.4\\weijinzhilu.bmp', 0.9, 0, 0, 1920, 1080)
+    generalact.ImgWhileDelay1Cdelay1('Galactic_realm\\huodong\\ver1.4\\weijinzhilu.bmp', 0.9, 0, 0, 1920, 1080)
     generalact.moveclick_1s(1241, 532)
     autobat()
     batagain()
